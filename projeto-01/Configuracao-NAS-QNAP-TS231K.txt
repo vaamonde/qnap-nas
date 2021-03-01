@@ -1,9 +1,22 @@
 Projeto de Migração do Servidor Desktop Windows 10 para o Storage NAS QNAP TS-231K
 
+Objetivo da migração do Desktop Windows para o NAS QNAP: desativação do Servidor/Desktop Windows 10 e remoção da localiação atual para ser utilizado como Desktop de um novo funcionário, a utilização do NAS QNAP irá diminuir o consumo de energia e possibilitará colocar o mesmo dentro do Rack conforme imagens:
+Imagem-01: Servidor atual:
+Imagem-02: NAS QNAP no rack atual: 
+
+Servidor de Arquivos atual: Desktop Windows 10
+CPU: 
+Hard Disk: - Sistema de Arquivos: NTFS
+
 NAS Modelo: QNAP TS-231K - Firmware: 4.5.2.1566 (01/03/2021)
 CPU: Cortex-A15 Quad-Core 1.7Ghz - 1.0GB RAM
 Hard Disk: 02 (dois) Seagate Barracuda 2TB 256MB Cache 7200rpm
 Licença: exFAT Driver
+
+Infraestrutura de Rede atual:
+Switch: 01 (um) TP-Link T-1600G-28TS 24 Portas RJ45 10/100/1000Mbps 
+Switch PoE: 01 (um) TP-Link TL-SG1005P 05 Portas RJ45 10/100/1000Mbps 
+Access Point: 02 (dois) Ubiquiti Unifi UAP-AC-LR 01 Porta RJ45 PoE 10/100/1000Mbps
 
 #Configurações principais do NAS-QNAP TS-231K
 
