@@ -100,8 +100,12 @@ Obs: Igual a opção de adicionar um Local de Rede
 #05_ Montagem do compartilhamento utilizando o comando: Mklink:
 	Prompt de Comando como Administrador
 		cd \users\usuário\Documentos
-		mklink /D  Arquivos \\ServidorCZ10\Arquivos
+		mklink /D  Arquivos \\Servidor\Arquivos
 Obs: Conforme a documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento
+
+#06_ Montagem do compartilhamento utilizando o comando: mount:
+	mount -o anon \\Servidor\Arquivos n:
+Obs: Suporte ao protocolo NFS, nesse configuração tivemos incompatibilidade de caracteres no compartilhamento
 		
 ------------------------------------------------------------------------------------
 
