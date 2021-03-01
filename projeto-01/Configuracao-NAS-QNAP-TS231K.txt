@@ -10,11 +10,13 @@ Licença: exFAT Driver
 #01_ Armazenamento e Instantâneos
 	Armazenamento
 		Conjunto de Armazenamento 1
-			HD-1 (Sistema) - Volume espesso
+			HD-1 (Sistema) - Volume espesso (Limiar 80%)
+		
 		Conjunto de Armazenamento 2
-			HD-2 (Arquivos) - Volume espesso
+			HD-2 (Arquivos) - Volume espesso (Limiar 80%)
+
 Obs: Não foi configurado o recurso de RAID-1, nos testes de desempenho de Leitura/Escrita e principalmente na Busca de Arquivos,
-a velocidade ficou muito abaixo do esperado, ficando pior em relação do Servidor atual da empresa (Desktop Windows 10)
+a velocidade ficou muito abaixo do esperado, ficando pior em relação ao Servidor atual da empresa (Desktop Windows 10)
 
 #02_ Chaves de Rede e Virtual
 	Interfaces
@@ -22,8 +24,9 @@ a velocidade ficou muito abaixo do esperado, ficando pior em relação do Servid
 		Adapter2 - IP Fixo: 192.168.0.251/24
 		Hostname: Servidor
 		NetBIOS Name: Servidor
-Obs: Não foi configurado o recurso de Entrocamento de Porta, nesse cenário as duas interfaces fazem referencia ao NetBIOS do NAS,
-fazendo automaticamente o Load Balanced de acesso ao NAS
+
+Obs: Não foi configurado o recurso de Entrocamento de Porta, nesse cenário as duas interfaces fazem referência ao NetBIOS do NAS,
+fazendo automaticamente o Load Balanced de acesso ao NAS utilizando o Hostname
 		
 #03_ Serviço de Rede e de Arquivos
 	Win/Mac/NFS
@@ -32,6 +35,7 @@ fazendo automaticamente o Load Balanced de acesso ao NAS
 			Servidor independente
 				Opções Avançadas
 					Versão do SMB: 2.1
+
 Obs: Foi configurado somente o protocolo SMB2.1 nas opções de Maior Versão e Menor Versão do SMB, testes feitos na versão 3.0 deixou
 lento as Pesquisas e Leitura e Escrita nos compartilhamentos, nesse cenário não foi configurado o Servidor de Controlador de Domínio,
 trabalhando com Rede Workgroup e aplicando permissões de acesso ao compartilhamento e pastas utilizando usuários e grupos do NAS.
@@ -41,6 +45,7 @@ trabalhando com Rede Workgroup e aplicando permissões de acesso ao compartilham
 		Permissões avançadas
 			Habilitar permissões avançadas de pasta
 			Habilitar Windows ACL Support
+
 Obs: Com essa opção habilitada, possibilita os recursos de permissões de acesso aos compartilhamentos e pastas utilizando o Windows
 Explorer para aplicar as Permissões NTFS e de Compartilhamento.
 
@@ -56,7 +61,7 @@ Explorer para aplicar as Permissões NTFS e de Compartilhamento.
 	Compartilhamento: Arquivos-BKP <-- Share sincronização dos arquivos da empresa
 		Suporte: Lixeira, Instantâneo (Snapshot), ACL Avançadas, ABSE, Backup HBS3
 	
-  Compartilhamento: Backup <-- Share de backup dos arquivos da empresa
+	Compartilhamento: Backup <-- Share de backup dos arquivos da empresa
 		Suporte: Lixeira, Instantâneo (Snapshot), ACL Avançadas, ABSE, Backup HBS3
 		
 ------------------------------------------------------------------------------------
@@ -65,7 +70,7 @@ Explorer para aplicar as Permissões NTFS e de Compartilhamento.
 
 #01_ Montagem do compartilhamento utilizando o comando: NET
 	net use n: \\Servidor\Arquivos /persistent:yes
-		Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo
+Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo
 	
 #02_ Montagem do compartilhamento utilizando a opção do Windows Explorer: Mapeamento de Unidade de Rede:
 	Windows Explorer
@@ -73,7 +78,7 @@ Explorer para aplicar as Permissões NTFS e de Compartilhamento.
 			Mapear Unidade de Rede
 				n:
 				\\Servidor\Arquivos
-				Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo
+Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo
 			
 #03_ Montagem do compartilhamento utilizando a opção do Windows Explorer: Adicionar um Local de Rede:
 	Windows Explorer
@@ -82,7 +87,7 @@ Explorer para aplicar as Permissões NTFS e de Compartilhamento.
 				Escolher um local de rede personalizado
 				\\Servidor\Arquivos
 				Arquivos
-        Obs: Conforme documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento
+Obs: Conforme documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento
 
 #04_ Montagem do compartilhamento utilizando a opção do Windows Explorer: WebDAV:
 	Windows Explorer
@@ -90,13 +95,13 @@ Explorer para aplicar as Permissões NTFS e de Compartilhamento.
 			Adicionar um local de rede
 				Escolher um local de rede personalizado
 				https://Servidor:5001/Arquivos
-        Obs: Igual a opção de adicionar um Local de Rede
+Obs: Igual a opção de adicionar um Local de Rede
 
 #05_ Montagem do compartilhamento utilizando o comando: Mklink:
 	Prompt de Comando como Administrador
 		cd \users\usuário\Documentos
 		mklink /D  Arquivos \\ServidorCZ10\Arquivos
-    Obs: Conforme a documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento
+Obs: Conforme a documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento
 		
 ------------------------------------------------------------------------------------
 
@@ -112,6 +117,6 @@ Explorer para aplicar as Permissões NTFS e de Compartilhamento.
 #01_ Teste de pesquisa utilizando o Windows Explorer Search
 
 #02_ Teste de pesquisa utilizando o Software Agente Ransack Free
-  https://www.mythicsoft.com/agentransack/
+	https://www.mythicsoft.com/agentransack/
 
 ------------------------------------------------------------------------------------
