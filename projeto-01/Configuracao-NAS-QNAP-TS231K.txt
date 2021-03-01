@@ -11,7 +11,7 @@ Gráficas utilizando o CorelDRAW e Adobe Photoshop.
 
 Desafio da migração: após a primeira migração feita em Janeiro/2021, a principal reclamação dos usuários da Rede Local estavá 
 associada a velocidade de Pesquisa e Busca utilizando o recurso do Windows Explorer Search com as opções habilidades de: Opções 
-Avancadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramente de trabalho da empresa, devido a mesma 
+Avançadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramente de trabalho da empresa, devido a mesma 
 trabalhar com vários arquivos de Planilhas Eletrônicas desenvolvidas no Microsoft Office Excel e separadas por várias áreas da 
 empresa (Produção, Estoque, Vendas, Faturamento, etc...), esse recurso e fundamental para localizar o conteúdo dos arquivos 
 correspondente a cada pedido de venda da empresa (Obs: a mesma não possui um sistema de Gestão Empresarial para gerenciar todas 
@@ -192,15 +192,17 @@ Parâmetros utilizados no Robocopy
 #01_ Link de referência e pesquisas sobre a velocidade do Windows Explorer Search e da Indexação do Windows
 
 Keywords google: qnap slow smb performance, qnap slow search share windows, qnap indexing files, qnap windows search, 
-qnap nas offline files, Mapped network drive is offline, 
+qnap nas offline files, Mapped network drive is offline, windows search indexer samba4, qnap smb windows search index
 
 01: https://forum.qnap.com/viewtopic.php?t=159277
 02: https://forum.qnap.com/viewtopic.php?t=110401
 03: https://forum.qnap.com/viewtopic.php?t=138959
 04: https://forum.qnap.com/viewtopic.php?t=44092
-05: https://answers.microsoft.com/en-us/windows/forum/windows_7-files/add-nas-shares-to-index/d6a6cb41-1d66-476c-ab1e-70329dd55cc5
-06: https://petri.com/add-nas-based-network-locations-windows-10-fast-search
-07: https://www.online-tech-tips.com/windows-10/add-network-folder-to-windows-search-index/
-08: https://redmondmag.com/articles/2020/12/02/5-steps-to-fix-windows-indexing.aspx
-09: https://social.technet.microsoft.com/Forums/en-US/cef10e47-2fe1-482b-be62-ae74116a4e5f/mapped-network-drive-is-offline?forum=win10itpronetworking
-10: https://www.onmsft.com/how-to/how-to-use-network-file-shares-while-offline-in-windows-10
+05: https://forum.qnap.com/viewtopic.php?t=25708
+
+01: https://answers.microsoft.com/en-us/windows/forum/windows_7-files/add-nas-shares-to-index/d6a6cb41-1d66-476c-ab1e-70329dd55cc5
+02: https://petri.com/add-nas-based-network-locations-windows-10-fast-search
+03: https://www.online-tech-tips.com/windows-10/add-network-folder-to-windows-search-index/
+04: https://redmondmag.com/articles/2020/12/02/5-steps-to-fix-windows-indexing.aspx
+05: https://social.technet.microsoft.com/Forums/en-US/cef10e47-2fe1-482b-be62-ae74116a4e5f/mapped-network-drive-is-offline?forum=win10itpronetworking
+06: https://www.onmsft.com/how-to/how-to-use-network-file-shares-while-offline-in-windows-10
