@@ -9,9 +9,19 @@ Imagem-02: NAS QNAP no rack atual: https://github.com/vaamonde/qnap-nas/blob/mai
 Principais arquivos utilizados pela empresa: Planilhas Eletrônicas desenvolvidas em Microsoft Excel e arquivos de Imagens
 Gráficas utilizando o CorelDRAW e Adobe Photoshop.
 
+Desafio da migração: após a primeira migração feita em Janeiro/2021, a principal reclamação dos usuários da Rede Local estavá 
+associada a velocidade de Pesquisa e Busca utilizando o recurso do Windows Explorer Search com as opções habilidades de: Opções 
+Avancadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramente de trabalho da empresa, devido a mesma 
+trabalhar com vários arquivos de Planilhas Eletrônicas desenvolvidas no Microsoft Office Excel e separadas por várias áreas da 
+empresa (Produção, Estoque, Vendas, Faturamento, etc...), esse recurso e fundamental para localizar o conteúdo dos arquivos 
+correspondente a cada pedido de venda da empresa (Obs: a mesma não possui um sistema de Gestão Empresarial para gerenciar todas 
+as fazes de produção e venda dos seus produtos).
+
 Servidor de Arquivos atual: Desktop Windows 10
 CPU: 
 Hard Disk: - Sistema de Arquivos: NTFS
+Localização do arquivos da empresa:
+Compartilhamento dos arquivos da empresa:
 
 NAS Modelo: QNAP TS-231K - Firmware: 4.5.2.1566 (01/03/2021)
 CPU: Cortex-A15 Quad-Core 1.7Ghz - 1.0GB RAM
@@ -43,9 +53,9 @@ a velocidade ficou muito abaixo do esperado, ficando pior em relação ao Servid
 		Hostname: Servidor
 		NetBIOS Name: Servidor
 
-Obs: Não foi configurado o recurso de Entrocamento de Porta, nesse cenário as duas interfaces fazem referência ao NetBIOS do NAS,
-fazendo automaticamente o Load Balanced de acesso ao NAS utilizando o Hostname, teste executados via Endereço IPv4 e pelo Hostname
-para a transferência de arquivos ou leitura foram os mesmos.
+Obs: Não foi configurado o recurso de Entrocamento de Porta, nesse cenário as duas interfaces fazem referência ao NetBIOS do NAS 
+(Balance-rr Round-Robin) fazendo automaticamente o Load Balanced de acesso ao NAS utilizando o Hostname, teste executados via 
+Endereço IPv4 e pelo Hostname para a transferência de arquivos ou leitura foram os mesmos.
 		
 #03_ Serviço de Rede e de Arquivos
 	Win/Mac/NFS
@@ -55,9 +65,10 @@ para a transferência de arquivos ou leitura foram os mesmos.
 				Opções Avançadas
 					Versão do SMB: 2.1
 
-Obs: Foi configurado somente o protocolo SMB2.1 nas opções de Maior Versão e Menor Versão do SMB, testes feitos na versão 3.0 deixou
-lento as Pesquisas e Leitura/Escrita nos compartilhamentos, nesse cenário não foi configurado o Servidor de Controlador de Domínio,
-trabalhando com Rede Workgroup e aplicando permissões de acesso ao compartilhamento e pastas utilizando usuários e grupos do NAS.
+Obs: Foi configurado somente o protocolo SMB2.1 nas opções de Maior Versão e Menor Versão do SMB, testes feitos na versão 3.0 
+deixou lento as Pesquisas e Leitura/Escrita nos compartilhamentos, nesse cenário não foi configurado o Servidor de Controlador 
+de Domínio, trabalhando com Rede Workgroup e aplicando permissões de acesso ao compartilhamento e pastas utilizando usuários 
+e grupos do NAS.
 				
 #04_ Privilégios
 	Pastas Compartilhadas
@@ -65,9 +76,9 @@ trabalhando com Rede Workgroup e aplicando permissões de acesso ao compartilham
 			Habilitar permissões avançadas de pasta
 			Habilitar Windows ACL Support
 
-Obs: Com essa opção habilitada, possibilita os recursos de permissões de acesso aos compartilhamentos e pastas utilizando o Windows
-Explorer para aplicar as Permissões NTFS e de Compartilhamento, permitindo criar regras de ACL e quebra de herança de pastas, esse
-recurso será utilizando junto com o ABES (Access-Based Enumeration Service)
+Obs: Com essa opção habilitada, possibilita os recursos de permissões de acesso aos compartilhamentos e pastas utilizando o 
+Windows Explorer para aplicar as Permissões NTFS e de Compartilhamento, permitindo criar regras de ACL e quebra de herança 
+de pastas, esse recurso será utilizando junto com o ABES (Access-Based Enumeration Service)
 
 ------------------------------------------------------------------------------------
 
@@ -84,9 +95,9 @@ recurso será utilizando junto com o ABES (Access-Based Enumeration Service)
 	Compartilhamento: Backup <-- Share de backup dos arquivos da empresa
 		Suporte: Lixeira, Instantâneo (Snapshot), ACL Avançadas, ABES, Backup HBS3
 		
-Obs: foi optado em não trabalhar com RAID-1, possibilitando trabalhar com dois Hard Disk independente mais sincronizados utilizando
-o software de Backup HBS3 (Hybrid Backup Sync), nesse cenário também será utilziado o software Qsync Client utilizando o Hard Disk
-de Arquivos (é a pastas dos usuários /home e /homes também ficará nesse hard disk).
+Obs: foi optado em não trabalhar com RAID-1, possibilitando trabalhar com dois Hard Disk independente mais sincronizados 
+utilizando o software de Backup HBS3 (Hybrid Backup Sync), nesse cenário também será utilziado o software Qsync Client 
+utilizando o Hard Disk de Arquivos (é a pastas dos usuários /home e /homes também ficará nesse hard disk).
 		
 ------------------------------------------------------------------------------------
 
@@ -94,8 +105,8 @@ de Arquivos (é a pastas dos usuários /home e /homes também ficará nesse hard
 
 #01_ Montagem do compartilhamento utilizando o comando: NET
 	net use n: \\Servidor\Arquivos /persistent:yes
-Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo,
-mapeamento principal, mesmo tipo de mapeamente utilizado atualmente na empresa.
+Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo, mapeamento 
+principal, mesmo tipo de mapeamente utilizado atualmente na empresa.
 	
 #02_ Montagem do compartilhamento utilizando a opção do Windows Explorer: Mapeamento de Unidade de Rede:
 	Windows Explorer
@@ -103,8 +114,8 @@ mapeamento principal, mesmo tipo de mapeamente utilizado atualmente na empresa.
 			Mapear Unidade de Rede
 				n:
 				\\Servidor\Arquivos
-Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo,
-idem do comando net use.
+Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo, idem do 
+comando net use.
 			
 #03_ Montagem do compartilhamento utilizando a opção do Windows Explorer: Adicionar um Local de Rede:
 	Windows Explorer
@@ -113,9 +124,9 @@ idem do comando net use.
 				Escolher um local de rede personalizado
 				\\Servidor\Arquivos
 				Arquivos
-Obs: Conforme documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento,
-nesse cenário a facilidade será não utilziar uma Letra de Unidade, os testes de busca de arquivos demoraram
-o mesmo tempo que a unidade mapeada
+Obs: Conforme documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento, nesse cenário 
+a facilidade será não utilziar uma Letra de Unidade, os testes de busca de arquivos demoraram o mesmo tempo que a unidade 
+mapeada.
 
 #04_ Montagem do compartilhamento utilizando a opção do Windows Explorer: WebDAV:
 	Windows Explorer
@@ -123,23 +134,23 @@ o mesmo tempo que a unidade mapeada
 			Adicionar um local de rede
 				Escolher um local de rede personalizado
 				https://Servidor:5001/Arquivos
-Obs: Igual a opção de adicionar um Local de Rede, nesse cenário utilizando o acesso ao servidor WebDAV que foi
-configurado nas permissões de compartilhamento da pasta, nos teste de velocidade de busca de arquivos, demorou
-mais para encontrar e localizar o conteúdo.
+Obs: Igual a opção de adicionar um Local de Rede, nesse cenário utilizando o acesso ao servidor WebDAV que foi configurado 
+nas permissões de compartilhamento da pasta, nos teste de velocidade de busca de arquivos, demorou mais para encontrar e 
+localizar o conteúdo.
 
 #05_ Montagem do compartilhamento utilizando o comando: Mklink:
 	Prompt de Comando como Administrador
 		cd \users\usuário\Documentos
 		mklink /D  Arquivos \\Servidor\Arquivos
-Obs: Conforme a documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento, foi
-feito a criação do Link de Diretório na pasta: Documentos, executado a indexação e feito a busca de arquivos e 
-conteúdo, nesse cenário o processo demorou mais tempo para localizar os arquivos.
+Obs: Conforme a documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento, foi feito a 
+criação do Link de Diretório na pasta: Documentos, executado a indexação e feito a busca de arquivos e conteúdo, nesse 
+cenário o processo demorou mais tempo para localizar os arquivos.
 
 #06_ Montagem do compartilhamento utilizando o comando: mount:
 	mount -o anon \\Servidor\Arquivos n:
-Obs: Suporte ao protocolo NFS, nesse configuração tivemos incompatibilidade de caracteres no compartilhamento, 
-velocidade de busca de arquivos demorou bastante devido a incompatibilidade de caracteres (projeto não foi mais
-testado e nem verificado a falha dos caracteres)
+Obs: Suporte ao protocolo NFS, nesse configuração tivemos incompatibilidade de caracteres no compartilhamento, velocidade 
+de busca de arquivos demorou bastante devido a incompatibilidade de caracteres (projeto não foi mais testado e nem 
+verificado a falha dos caracteres)
 		
 ------------------------------------------------------------------------------------
 
@@ -177,3 +188,19 @@ Parâmetros utilizados no Robocopy
 	https://www.mythicsoft.com/agentransack/
 
 ------------------------------------------------------------------------------------
+
+#01_ Link de referência e pesquisas sobre a velocidade do Windows Explorer Search e da Indexação do Windows
+
+Keywords google: qnap slow smb performance, qnap slow search share windows, qnap indexing files, qnap windows search, 
+qnap nas offline files, Mapped network drive is offline, 
+
+01: https://forum.qnap.com/viewtopic.php?t=159277
+02: https://forum.qnap.com/viewtopic.php?t=110401
+03: https://forum.qnap.com/viewtopic.php?t=138959
+04: https://forum.qnap.com/viewtopic.php?t=44092
+05: https://answers.microsoft.com/en-us/windows/forum/windows_7-files/add-nas-shares-to-index/d6a6cb41-1d66-476c-ab1e-70329dd55cc5
+06: https://petri.com/add-nas-based-network-locations-windows-10-fast-search
+07: https://www.online-tech-tips.com/windows-10/add-network-folder-to-windows-search-index/
+08: https://redmondmag.com/articles/2020/12/02/5-steps-to-fix-windows-indexing.aspx
+09: https://social.technet.microsoft.com/Forums/en-US/cef10e47-2fe1-482b-be62-ae74116a4e5f/mapped-network-drive-is-offline?forum=win10itpronetworking
+10: https://www.onmsft.com/how-to/how-to-use-network-file-shares-while-offline-in-windows-10
