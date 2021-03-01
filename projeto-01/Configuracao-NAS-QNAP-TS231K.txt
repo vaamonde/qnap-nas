@@ -1,6 +1,8 @@
 Projeto de Migração do Servidor Desktop Windows 10 para o Storage NAS QNAP TS-231K
 
-Objetivo da migração do Desktop Windows para o NAS QNAP: desativação do Servidor/Desktop Windows 10 e remoção da localiação atual para ser utilizado como Desktop de um novo funcionário, a utilização do NAS QNAP irá diminuir o consumo de energia e possibilitará colocar o mesmo dentro do Rack conforme imagens:
+Objetivo da migração do Desktop Windows para o NAS QNAP: desativação do Servidor/Desktop Windows 10 e remoção da 
+localiação atual para ser utilizado como Desktop de um novo funcionário, a utilização do NAS QNAP irá diminuir o 
+consumo de energia e possibilitará colocar o mesmo dentro do Rack conforme imagens:
 Imagem-01: Servidor atual:
 Imagem-02: NAS QNAP no rack atual: 
 
