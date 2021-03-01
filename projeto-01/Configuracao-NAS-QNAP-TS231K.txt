@@ -109,6 +109,12 @@ Obs: Suporte ao protocolo NFS, nesse configuração tivemos incompatibilidade de
 		
 ------------------------------------------------------------------------------------
 
+#01_ Total de Arquivos e Diretórios no Compartilhamento: Arquivos
+	Total (01/03/2021): 250,61GB
+	Arquivos (01/03/2021): 163092
+	Diretórios (01/03/2021): 9288
+	
+-------------------------------------------------------------------------------------
 #01_ Teste de desempenho de Leitura e Escrita utilizando o software: NAS performance tester
 	http://www.808.dk/?code-csharp-nas-performance
 
