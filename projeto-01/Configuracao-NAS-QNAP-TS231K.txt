@@ -15,7 +15,7 @@ Avancadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferra
 trabalhar com vários arquivos de Planilhas Eletrônicas desenvolvidas no Microsoft Office Excel e separadas por várias áreas da 
 empresa (Produção, Estoque, Vendas, Faturamento, etc...), esse recurso e fundamental para localizar o conteúdo dos arquivos 
 correspondente a cada pedido de venda da empresa (Obs: a mesma não possui um sistema de Gestão Empresarial para gerenciar todas 
-as fazes de produção e venda dos seus produtos).
+as fases de produção e venda dos seus produtos).
 
 Servidor de Arquivos atual: Desktop Windows 10
 CPU: 
