@@ -9,22 +9,22 @@ Principais arquivos utilizados pela empresa: Planilhas Eletrônicas desenvolvida
 
 Desafio da migração: após a primeira migração feita em Janeiro/2021, a principal reclamação dos usuários da Rede Local estavá  associada a velocidade de Pesquisa e Busca utilizando o recurso do Windows Explorer Search com as opções habilidades de: Opções  Avançadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramente de trabalho da empresa, devido a mesma  trabalhar com vários arquivos de Planilhas Eletrônicas desenvolvidas no Microsoft Office Excel e separadas por várias áreas da  empresa (Produção, Estoque, Vendas, Faturamento, etc...), esse recurso e fundamental para localizar o conteúdo dos arquivos  correspondente a cada pedido de venda da empresa (Obs: a mesma não possui um sistema de Gestão Empresarial para gerenciar todas as fases de produção e venda dos seus produtos).
 
-Servidor de Arquivos atual: Desktop Windows 10 Pro<br>
-CPU: AMD A10-7860k Radeon R7 - 8GB RAM<br>
-Hard Disk: 01 (um) Seagate Barracuda 500GB 16MB Cache 7200rpm - Sistema de Arquivos: NTFS<br>
-Placa de Rede: Realtek PCIe GbE 10/100/1000Mbps<br>
-Localização dos arquivos da empresa: C:\Users\Usuário\Documents\Servidor<br>
-Compartilhamento dos arquivos da empresa: \\192.168.0.9\Users\Usuário\Documents<br>
+## **Servidor de Arquivos atual: Desktop Windows 10 Pro**
+	CPU: AMD A10-7860k Radeon R7 - 8GB RAM
+	Hard Disk: 01 (um) Seagate Barracuda 500GB 16MB Cache 7200rpm - Sistema de Arquivos: NTFS
+	Placa de Rede: Realtek PCIe GbE 10/100/1000Mbps
+	Localização dos arquivos da empresa: C:\Users\Usuário\Documents\Servidor
+	Compartilhamento dos arquivos da empresa: \\192.168.0.9\Users\Usuário\Documents
 
-NAS Modelo: QNAP TS-231K - Firmware: 4.5.2.1566 (01/03/2021)<br>
-CPU: Cortex-A15 Quad-Core 1.7Ghz - 1.0GB RAM<br>
-Hard Disk: 02 (dois) Seagate Barracuda 2TB 256MB Cache 7200rpm<br>
-Licença: exFAT Driver<br>
+## **NAS Modelo: QNAP TS-231K - Firmware: 4.5.2.1566 (01/03/2021)**
+	CPU: Cortex-A15 Quad-Core 1.7Ghz - 1.0GB RAM<br>
+	Hard Disk: 02 (dois) Seagate Barracuda 2TB 256MB Cache 7200rpm<br>
+	Licença: exFAT Driver<br>
 
-Infraestrutura de Rede atual:<br>
-Switch: 01 (um) TP-Link T-1600G-28TS 24 Portas RJ45 10/100/1000Mbps<br>
-Switch PoE: 01 (um) TP-Link TL-SG1005P 05 Portas RJ45 10/100/1000Mbps <br>
-Access Point: 02 (dois) Ubiquiti Unifi UAP-AC-LR 01 Porta RJ45 PoE 10/100/1000Mbps<br>
+## **Infraestrutura de Rede**
+	Switch: 01 (um) TP-Link T-1600G-28TS 24 Portas RJ45 10/100/1000Mbps
+	Switch PoE: 01 (um) TP-Link TL-SG1005P 05 Portas RJ45 10/100/1000Mbps
+	Access Point: 02 (dois) Ubiquiti Unifi UAP-AC-LR 01 Porta RJ45 PoE 10/100/1000Mbps
 
 ------------------------------------------------------------------------------------
 
@@ -89,7 +89,7 @@ Obs: Com essa opção habilitada, possibilita os recursos de permissões de aces
 	Compartilhamento: Arquivos <-- Share principal dos arquivos da empresa
 		Suporte: Lixeira, Instantâneo (Snapshot), ACL Avançadas, ABES
 
-Obs: Foi optado em não trabalhar com RAID-1, possibilitando trabalhar com dois Hard Disk independente mais sincronizados utilizando o software de Backup HBS3 (Hybrid Backup Sync), nesse cenário também será utilizado o software Qsync Client utilizando o Hard Disk de Arquivos (é a pastas dos usuários /home e /homes também ficará nesse hard disk).
+Obs: Foi optado em não trabalhar com RAID-1, possibilitando trabalhar com dois Hard Disk independente mais sincronizados utilizando o software de Backup HBS3 (Hybrid Backup Sync), nesse cenário também será utilizado o software QSync Client utilizando o Hard Disk de Arquivos (é a pastas dos usuários /home e /homes também ficará nesse hard disk).
 		
 ------------------------------------------------------------------------------------
 
@@ -148,14 +148,14 @@ Obs: Suporte ao protocolo NFS, nesse configuração tivemos incompatibilidade de
 	robocopy S:\Servidor N:\ /S /E /R:0 /W:0 /V /NP /ETA /LOG:robocopy.log
 	
 Parâmetros utilizados no Robocopy
-/S = Copia subdiretórios. Essa opção exclui automaticamente os diretórios vazios.
-/E = Copia subdiretórios. Essa opção inclui automaticamente diretórios vazios.
-/R:0 = Especifica o número de repetições em cópias com falha. O valor padrão de n é 1 milhão (1 milhão tentativas).
-/W:0 = Especifica o tempo de espera entre as tentativas, em segundos. O valor padrão de n é 30 (tempo de espera de 30 segundos).
-/V = Produz a saída detalhada e mostra todos os arquivos ignorados.
-/NP = Especifica que o progresso da operação de cópia (o número de arquivos ou diretórios copiados até o momento) não será exibido.
-/ETA = Mostra o tempo estimado de chegada (ETA) dos arquivos copiados.
-/LOG: = Grava a saída de status no arquivo de log (substitui o arquivo de log existente).
+	/S = Copia subdiretórios. Essa opção exclui automaticamente os diretórios vazios.
+	/E = Copia subdiretórios. Essa opção inclui automaticamente diretórios vazios.
+	/R:0 = Especifica o número de repetições em cópias com falha. O valor padrão de n é 1 milhão (1 milhão tentativas).
+	/W:0 = Especifica o tempo de espera entre as tentativas, em segundos. O valor padrão de n é 30 (tempo de espera de 30 segundos).
+	/V = Produz a saída detalhada e mostra todos os arquivos ignorados.
+	/NP = Especifica que o progresso da operação de cópia (o número de arquivos ou diretórios copiados até o momento) não será exibido.
+	/ETA = Mostra o tempo estimado de chegada (ETA) dos arquivos copiados.
+	/LOG: = Grava a saída de status no arquivo de log (substitui o arquivo de log existente).
 
 ------------------------------------------------------------------------------------
 
