@@ -202,6 +202,7 @@ qnap ms-wsp,
 03: https://forum.qnap.com/viewtopic.php?t=138959
 04: https://forum.qnap.com/viewtopic.php?t=44092
 05: https://forum.qnap.com/viewtopic.php?t=25708
+06: https://forum.qnap.com/viewtopic.php?t=140883
 
 01: https://answers.microsoft.com/en-us/windows/forum/windows_7-files/add-nas-shares-to-index/d6a6cb41-1d66-476c-ab1e-70329dd55cc5
 02: https://petri.com/add-nas-based-network-locations-windows-10-fast-search
