@@ -1,6 +1,6 @@
 # Projeto de Migração do Servidor Desktop Windows 10 para o Storage NAS QNAP TS-231K
 
-## Objetivo da migração do Desktop Windows 10 para o NAS QNAP: desativação do Servidor/Desktop Windows 10 e remoção da localização atual para ser utilizado como Desktop de um novo funcionário, a utilização do NAS QNAP irá diminuir o consumo de energia elétrica e possibilitará colocar o mesmo dentro do Rack atual conforme imagens:
+Objetivo da migração do Desktop Windows 10 para o NAS QNAP: desativação do Servidor/Desktop Windows 10 e remoção da localização atual para ser utilizado como Desktop de um novo funcionário, a utilização do NAS QNAP irá diminuir o consumo de energia elétrica e possibilitará colocar o mesmo dentro do Rack atual conforme imagens:
 
 Imagem-01: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/01-servidor.jpg<br>
 Imagem-02: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/02-nas-qnap.jpg
@@ -30,7 +30,7 @@ Access Point: 02 (dois) Ubiquiti Unifi UAP-AC-LR 01 Porta RJ45 PoE 10/100/1000Mb
 
 # Configurações principais do NAS-QNAP TS-231K
 
-## ** 01_ Armazenamento e Instantâneos**
+## **01_ Armazenamento e Instantâneos**
 	Armazenamento
 		Conjunto de Armazenamento 1 (1.81TB - 1.31TB)
 			HD-1 (Sistema) - Volume espesso (Limiar 80%)
@@ -54,7 +54,7 @@ Obs: Não foi configurado o recurso de RAID-1, nos testes de desempenho de Leitu
 		Hostname: Servidor
 		NetBIOS/NetBEUI Name: Servidor
 
-Obs: Não foi configurado o recurso de Entrocamento de Porta, nesse cenário as duas interfaces fazem referência ao NetBIOS do NAS (Balance-rr Round-Robin) fazendo automaticamente o Load Balanced de acesso ao NAS utilizando o Hostname, teste executados via Endereço IPv4 e pelo Hostname para a transferência de arquivos ou leitura foram os mesmos.
+Obs: Não foi configurado o recurso de Entrocamento de Porta, nesse cenário as duas Interfaces fazem referência ao NetBIOS do NAS (Balance-rr Round-Robin) fazendo automaticamente o Load Balanced de acesso ao NAS utilizando o Hostname, teste executados via Endereço IPv4 e pelo Hostname para a transferência de arquivos ou leitura foram os mesmos.
 		
 ## **03_ Serviço de Rede e de Arquivos**
 	Win/Mac/NFS
@@ -89,13 +89,13 @@ Obs: Com essa opção habilitada, possibilita os recursos de permissões de aces
 	Compartilhamento: Arquivos <-- Share principal dos arquivos da empresa
 		Suporte: Lixeira, Instantâneo (Snapshot), ACL Avançadas, ABES
 
-Obs: foi optado em não trabalhar com RAID-1, possibilitando trabalhar com dois Hard Disk independente mais sincronizados utilizando o software de Backup HBS3 (Hybrid Backup Sync), nesse cenário também será utilizado o software Qsync Client utilizando o Hard Disk de Arquivos (é a pastas dos usuários /home e /homes também ficará nesse hard disk).
+Obs: Foi optado em não trabalhar com RAID-1, possibilitando trabalhar com dois Hard Disk independente mais sincronizados utilizando o software de Backup HBS3 (Hybrid Backup Sync), nesse cenário também será utilizado o software Qsync Client utilizando o Hard Disk de Arquivos (é a pastas dos usuários /home e /homes também ficará nesse hard disk).
 		
 ------------------------------------------------------------------------------------
 
 # Acesso aos compartilhamentos via SMB2.1 no NAS-QNAP TS-231K
 
-## **01_ Montagem do compartilhamento utilizando o comando: NET**
+## **01_ Montagem do compartilhamento utilizando o comando: Net**
 	net use n: \\Servidor\Arquivos /persistent:yes
 
 Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo, mapeamento principal, mesmo tipo de mapeamento utilizado atualmente na empresa.
@@ -107,7 +107,7 @@ Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com
 				n:
 				\\Servidor\Arquivos
 
-Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo, idem do comando net use.
+Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo, idem do comando: net use.
 			
 ## **03_ Montagem do compartilhamento utilizando a opção do Windows Explorer: Adicionar um Local de Rede:**
 	Windows Explorer
@@ -142,6 +142,8 @@ Obs: Suporte ao protocolo NFS, nesse configuração tivemos incompatibilidade de
 		
 ------------------------------------------------------------------------------------
 
+# Transferências dos arquivos para o NAS-QNAP TS-231K
+
 ## **01_ Transferências dos arquivos do Servidor Desktop Windows 10 utilizando o comando: Robocopy**
 	robocopy S:\Servidor N:\ /S /E /R:0 /W:0 /V /NP /ETA /LOG:robocopy.log
 	
@@ -157,6 +159,8 @@ Parâmetros utilizados no Robocopy
 
 ------------------------------------------------------------------------------------
 
+# Arquivos e Diretórios armazenados no NAS-QNAP TS-231K
+
 ## **01_ Total de Arquivos e Diretórios no Compartilhamento: Arquivos (Share principal da empresa)**
 	Total (01/03/2021): 250,61GB
 	Arquivos (01/03/2021): 163092
@@ -166,6 +170,8 @@ Imagem-03: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/03-
 Imagem-04: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/04-FilesFolders.png
 
 -------------------------------------------------------------------------------------
+
+# Testes de Desempenho de Leitura/Escrita e Largura de Banda do NAS-QNAP TS-231K
 
 ## **01_ Teste de desempenho de Leitura e Escrita utilizando o software: NAS Performance Tester**
 	http://www.808.dk/?code-csharp-nas-performance
@@ -184,6 +190,8 @@ Imagem-06: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/06-
 
 ------------------------------------------------------------------------------------
 
+# Testes de Busca de Arquivos e Conteúdos no NAS-QNAP TS-231K
+
 ## **01_ Teste de pesquisa utilizando o Windows Explorer Search**
 
 ## **02_ Teste de pesquisa utilizando o Software Agente Ransack Free**
@@ -193,20 +201,22 @@ Obs: Teste feito utilizando o Software Agente Ransack Free para localizar conte�
 
 ------------------------------------------------------------------------------------
 
+# Material de apoio para os testes executados na migração
+
 ## **01_ Link de referência das pesquisas sobre a velocidade do Windows Explorer Search e da Indexação do Windows em Storage NAS QNAP e outras soluções de Storage**
 
 Keywords google: qnap slow smb performance, qnap slow search share windows, qnap indexing files, qnap windows search, qnap nas offline files, Mapped network drive is offline, windows search indexer samba4, qnap smb windows search index, qnap ms-wsp, 
 
-01: https://forum.qnap.com/viewtopic.php?t=159277
-02: https://forum.qnap.com/viewtopic.php?t=110401
-03: https://forum.qnap.com/viewtopic.php?t=138959
-04: https://forum.qnap.com/viewtopic.php?t=44092
-05: https://forum.qnap.com/viewtopic.php?t=25708
-06: https://forum.qnap.com/viewtopic.php?t=140883
+01: https://forum.qnap.com/viewtopic.php?t=159277<br>
+02: https://forum.qnap.com/viewtopic.php?t=110401<br>
+03: https://forum.qnap.com/viewtopic.php?t=138959<br>
+04: https://forum.qnap.com/viewtopic.php?t=44092<br>
+05: https://forum.qnap.com/viewtopic.php?t=25708<br>
+06: https://forum.qnap.com/viewtopic.php?t=140883<br>
 
-01: https://answers.microsoft.com/en-us/windows/forum/windows_7-files/add-nas-shares-to-index/d6a6cb41-1d66-476c-ab1e-70329dd55cc5
-02: https://petri.com/add-nas-based-network-locations-windows-10-fast-search
-03: https://www.online-tech-tips.com/windows-10/add-network-folder-to-windows-search-index/
-04: https://redmondmag.com/articles/2020/12/02/5-steps-to-fix-windows-indexing.aspx
-05: https://social.technet.microsoft.com/Forums/en-US/cef10e47-2fe1-482b-be62-ae74116a4e5f/mapped-network-drive-is-offline?forum=win10itpronetworking
-06: https://www.onmsft.com/how-to/how-to-use-network-file-shares-while-offline-in-windows-10
+01: https://answers.microsoft.com/en-us/windows/forum/windows_7-files/add-nas-shares-to-index/d6a6cb41-1d66-476c-ab1e-70329dd55cc5<br>
+02: https://petri.com/add-nas-based-network-locations-windows-10-fast-search<br>
+03: https://www.online-tech-tips.com/windows-10/add-network-folder-to-windows-search-index/<br>
+04: https://redmondmag.com/articles/2020/12/02/5-steps-to-fix-windows-indexing.aspx<br>
+05: https://social.technet.microsoft.com/Forums/en-US/cef10e47-2fe1-482b-be62-ae74116a4e5f/mapped-network-drive-is-offline?forum=win10itpronetworking<br>
+06: https://www.onmsft.com/how-to/how-to-use-network-file-shares-while-offline-in-windows-10<br>
