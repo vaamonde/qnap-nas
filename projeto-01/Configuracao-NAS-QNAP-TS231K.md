@@ -1,64 +1,62 @@
 Projeto de Migração do Servidor Desktop Windows 10 para o Storage NAS QNAP TS-231K
 
-Objetivo da migração do Desktop Windows 10 para o NAS QNAP: desativação do Servidor/Desktop Windows 10 e remoção da 
-localização atual para ser utilizado como Desktop de um novo funcionário, a utilização do NAS QNAP irá diminuir o 
-consumo de energia elétrica e possibilitará colocar o mesmo dentro do Rack atual conforme imagens:
-Imagem-01: Servidor atual: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/01-servidor.jpg
-Imagem-02: NAS QNAP no rack atual: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/02-nas-qnap.jpg
+Objetivo da migração do Desktop Windows 10 para o NAS QNAP: desativação do Servidor/Desktop Windows 10 e remoção da localização atual para ser utilizado como Desktop de um novo funcionário, a utilização do NAS QNAP irá diminuir o consumo de energia elétrica e possibilitará colocar o mesmo dentro do Rack atual conforme imagens:
 
-Principais arquivos utilizados pela empresa: Planilhas Eletrônicas desenvolvidas em Microsoft Excel e arquivos de Imagens
-Gráficas utilizando o CorelDRAW e Adobe Photoshop.
+Imagem-01: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/01-servidor.jpg
+Imagem-02: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/02-nas-qnap.jpg
 
-Desafio da migração: após a primeira migração feita em Janeiro/2021, a principal reclamação dos usuários da Rede Local estavá 
-associada a velocidade de Pesquisa e Busca utilizando o recurso do Windows Explorer Search com as opções habilidades de: Opções 
-Avançadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramente de trabalho da empresa, devido a mesma 
-trabalhar com vários arquivos de Planilhas Eletrônicas desenvolvidas no Microsoft Office Excel e separadas por várias áreas da 
-empresa (Produção, Estoque, Vendas, Faturamento, etc...), esse recurso e fundamental para localizar o conteúdo dos arquivos 
-correspondente a cada pedido de venda da empresa (Obs: a mesma não possui um sistema de Gestão Empresarial para gerenciar todas 
-as fases de produção e venda dos seus produtos).
+Principais arquivos utilizados pela empresa: Planilhas Eletrônicas desenvolvidas em Microsoft Excel e arquivos de Imagens Gráficas utilizando o CorelDRAW e Adobe Photoshop.
 
-Servidor de Arquivos atual: Desktop Windows 10 Pro
-CPU: AMD A10-7860k Radeon R7 - 8GB RAM
-Hard Disk: 01 (um) Seagate Barracuda 500GB 16MB Cache 7200rpm - Sistema de Arquivos: NTFS
-Placa de Rede: Realtek PCIe GbE 10/100/1000Mbps
-Localização dos arquivos da empresa: C:\Users\Usuário\Documents\Servidor
-Compartilhamento dos arquivos da empresa: \\192.168.0.9\Users\Usuário\Documents
+Desafio da migração: após a primeira migração feita em Janeiro/2021, a principal reclamação dos usuários da Rede Local estavá  associada a velocidade de Pesquisa e Busca utilizando o recurso do Windows Explorer Search com as opções habilidades de: Opções  Avançadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramente de trabalho da empresa, devido a mesma  trabalhar com vários arquivos de Planilhas Eletrônicas desenvolvidas no Microsoft Office Excel e separadas por várias áreas da  empresa (Produção, Estoque, Vendas, Faturamento, etc...), esse recurso e fundamental para localizar o conteúdo dos arquivos  correspondente a cada pedido de venda da empresa (Obs: a mesma não possui um sistema de Gestão Empresarial para gerenciar todas as fases de produção e venda dos seus produtos).
 
-NAS Modelo: QNAP TS-231K - Firmware: 4.5.2.1566 (01/03/2021)
-CPU: Cortex-A15 Quad-Core 1.7Ghz - 1.0GB RAM
-Hard Disk: 02 (dois) Seagate Barracuda 2TB 256MB Cache 7200rpm
-Licença: exFAT Driver
+Servidor de Arquivos atual: Desktop Windows 10 Pro<br>
+CPU: AMD A10-7860k Radeon R7 - 8GB RAM<br>
+Hard Disk: 01 (um) Seagate Barracuda 500GB 16MB Cache 7200rpm - Sistema de Arquivos: NTFS<br>
+Placa de Rede: Realtek PCIe GbE 10/100/1000Mbps<br>
+Localização dos arquivos da empresa: C:\Users\Usuário\Documents\Servidor<br>
+Compartilhamento dos arquivos da empresa: \\192.168.0.9\Users\Usuário\Documents<br>
 
-Infraestrutura de Rede atual:
-Switch: 01 (um) TP-Link T-1600G-28TS 24 Portas RJ45 10/100/1000Mbps 
-Switch PoE: 01 (um) TP-Link TL-SG1005P 05 Portas RJ45 10/100/1000Mbps 
-Access Point: 02 (dois) Ubiquiti Unifi UAP-AC-LR 01 Porta RJ45 PoE 10/100/1000Mbps
+NAS Modelo: QNAP TS-231K - Firmware: 4.5.2.1566 (01/03/2021)<br>
+CPU: Cortex-A15 Quad-Core 1.7Ghz - 1.0GB RAM<br>
+Hard Disk: 02 (dois) Seagate Barracuda 2TB 256MB Cache 7200rpm<br>
+Licença: exFAT Driver<br>
 
-#Configurações principais do NAS-QNAP TS-231K
+Infraestrutura de Rede atual:<br>
+Switch: 01 (um) TP-Link T-1600G-28TS 24 Portas RJ45 10/100/1000Mbps<br>
+Switch PoE: 01 (um) TP-Link TL-SG1005P 05 Portas RJ45 10/100/1000Mbps <br>
+Access Point: 02 (dois) Ubiquiti Unifi UAP-AC-LR 01 Porta RJ45 PoE 10/100/1000Mbps<br>
 
-#01_ Armazenamento e Instantâneos
+------------------------------------------------------------------------------------
+
+Configurações principais do NAS-QNAP TS-231K
+
+01_ Armazenamento e Instantâneos
 	Armazenamento
-		Conjunto de Armazenamento 1
+		Conjunto de Armazenamento 1 (1.81TB - 1.31TB)
 			HD-1 (Sistema) - Volume espesso (Limiar 80%)
-		
-		Conjunto de Armazenamento 2
+			Sys Reservado: 85.1GB
+			Volume espesso: 1.4TB
+			Espaço Livre: 0,3TB
+			Assinatura: 81,9%	
+		Conjunto de Armazenamento 2 (1.81TB - 1.31TB)
 			HD-2 (Arquivos) - Volume espesso (Limiar 80%)
+			Sys Reservado: 85.1GB
+			Volume espesso: 1.4TB
+			Espaço Livre: 0,3TB
+			Assinatura: 81,9%
 
-Obs: Não foi configurado o recurso de RAID-1, nos testes de desempenho de Leitura/Escrita e principalmente na Busca de Arquivos,
-a velocidade ficou muito abaixo do esperado, ficando pior em relação ao Servidor atual da empresa (Desktop Windows 10)
+Obs: Não foi configurado o recurso de RAID-1, nos testes de desempenho de Leitura/Escrita e principalmente na Busca de Arquivos, a velocidade ficou muito abaixo do esperado, ficando pior em relação ao Servidor atual da empresa (Desktop Windows 10)
 
-#02_ Chaves de Rede e Virtual
+02_ Chaves de Rede e Virtual
 	Interfaces
 		Adapter1 - IP Fixo: 192.168.0.250/24
 		Adapter2 - IP Fixo: 192.168.0.251/24
 		Hostname: Servidor
-		NetBIOS Name: Servidor
+		NetBIOS/NetBEUI Name: Servidor
 
-Obs: Não foi configurado o recurso de Entrocamento de Porta, nesse cenário as duas interfaces fazem referência ao NetBIOS do NAS 
-(Balance-rr Round-Robin) fazendo automaticamente o Load Balanced de acesso ao NAS utilizando o Hostname, teste executados via 
-Endereço IPv4 e pelo Hostname para a transferência de arquivos ou leitura foram os mesmos.
+Obs: Não foi configurado o recurso de Entrocamento de Porta, nesse cenário as duas interfaces fazem referência ao NetBIOS do NAS (Balance-rr Round-Robin) fazendo automaticamente o Load Balanced de acesso ao NAS utilizando o Hostname, teste executados via Endereço IPv4 e pelo Hostname para a transferência de arquivos ou leitura foram os mesmos.
 		
-#03_ Serviço de Rede e de Arquivos
+03_ Serviço de Rede e de Arquivos
 	Win/Mac/NFS
 		Rede Microsoft
 			Habilitar o serviço de arquivos para rede Microsoft
@@ -66,96 +64,85 @@ Endereço IPv4 e pelo Hostname para a transferência de arquivos ou leitura fora
 				Opções Avançadas
 					Versão do SMB: 2.1
 
-Obs: Foi configurado somente o protocolo SMB2.1 nas opções de Maior Versão e Menor Versão do SMB, testes feitos na versão 3.0 
-deixou lento as Pesquisas e Leitura/Escrita nos compartilhamentos, nesse cenário não foi configurado o Servidor de Controlador 
-de Domínio, trabalhando com Rede Workgroup e aplicando permissões de acesso ao compartilhamento e pastas utilizando usuários 
-e grupos do NAS.
+Obs: Foi configurado somente o protocolo SMB2.1 nas opções de Maior Versão e Menor Versão do SMB, testes feitos na versão 3.0 deixou lento as Pesquisas e Leitura/Escrita nos compartilhamentos, nesse cenário não foi configurado o Servidor de Controlador de Domínio, trabalhando com Rede Workgroup e aplicando permissões de acesso ao compartilhamento e pastas utilizando usuários e grupos do NAS.
 				
-#04_ Privilégios
+04_ Privilégios
 	Pastas Compartilhadas
 		Permissões avançadas
 			Habilitar permissões avançadas de pasta
 			Habilitar Windows ACL Support
 
-Obs: Com essa opção habilitada, possibilita os recursos de permissões de acesso aos compartilhamentos e pastas utilizando o 
-Windows Explorer para aplicar as Permissões NTFS e de Compartilhamento, permitindo criar regras de ACL e quebra de herança 
-de pastas, esse recurso será utilizando junto com o ABES (Access-Based Enumeration Service)
+Obs: Com essa opção habilitada, possibilita os recursos de permissões de acesso aos compartilhamentos e pastas utilizando o Windows Explorer para aplicar as Permissões NTFS e de Compartilhamento, permitindo criar regras de ACL e quebra de herança de pastas, esse recurso será utilizando junto com o ABES (Access-Based Enumeration Service)
 
 ------------------------------------------------------------------------------------
 
-#Configurações de Armazenamento do NAS-QNAP TS-231K
+Configurações de Armazenamento do NAS-QNAP TS-231K
 
-#01_ HD-2 (Arquivos)
-	Compartilhamento: Arquivos <-- Share principal dos arquivos da empresa
-		Suporte: Lixeira, Instantâneo (Snapshot), ACL Avançadas, ABES
-	
-#02_ HD-1 (Sistema)
+01_ HD-1 (Sistema)
 	Compartilhamento: Arquivos-BKP <-- Share sincronização dos arquivos da empresa
 		Suporte: Lixeira, Instantâneo (Snapshot), ACL Avançadas, ABES, Backup HBS3
 	
 	Compartilhamento: Backup <-- Share de backup dos arquivos da empresa
 		Suporte: Lixeira, Instantâneo (Snapshot), ACL Avançadas, ABES, Backup HBS3
-		
-Obs: foi optado em não trabalhar com RAID-1, possibilitando trabalhar com dois Hard Disk independente mais sincronizados 
-utilizando o software de Backup HBS3 (Hybrid Backup Sync), nesse cenário também será utilziado o software Qsync Client 
-utilizando o Hard Disk de Arquivos (é a pastas dos usuários /home e /homes também ficará nesse hard disk).
+
+02_ HD-2 (Arquivos)
+	Compartilhamento: Arquivos <-- Share principal dos arquivos da empresa
+		Suporte: Lixeira, Instantâneo (Snapshot), ACL Avançadas, ABES
+
+Obs: foi optado em não trabalhar com RAID-1, possibilitando trabalhar com dois Hard Disk independente mais sincronizados utilizando o software de Backup HBS3 (Hybrid Backup Sync), nesse cenário também será utilizado o software Qsync Client utilizando o Hard Disk de Arquivos (é a pastas dos usuários /home e /homes também ficará nesse hard disk).
 		
 ------------------------------------------------------------------------------------
 
-#Acesso aos compartilhamentos via SMB2.1 no NAS-QNAP TS-231K
+Acesso aos compartilhamentos via SMB2.1 no NAS-QNAP TS-231K
 
-#01_ Montagem do compartilhamento utilizando o comando: NET
+01_ Montagem do compartilhamento utilizando o comando: NET
 	net use n: \\Servidor\Arquivos /persistent:yes
-Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo, mapeamento 
-principal, mesmo tipo de mapeamente utilizado atualmente na empresa.
+
+Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo, mapeamento principal, mesmo tipo de mapeamento utilizado atualmente na empresa.
 	
-#02_ Montagem do compartilhamento utilizando a opção do Windows Explorer: Mapeamento de Unidade de Rede:
+02_ Montagem do compartilhamento utilizando a opção do Windows Explorer: Mapeamento de Unidade de Rede:
 	Windows Explorer
 		Este Computador
 			Mapear Unidade de Rede
 				n:
 				\\Servidor\Arquivos
-Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo, idem do 
-comando net use.
+
+Obs: Permiti que os arquivos desta unidade tenham o conteúdo indexado junto com as propriedades do arquivo, idem do comando net use.
 			
-#03_ Montagem do compartilhamento utilizando a opção do Windows Explorer: Adicionar um Local de Rede:
+03_ Montagem do compartilhamento utilizando a opção do Windows Explorer: Adicionar um Local de Rede:
 	Windows Explorer
 		Este Computador
 			Adicionar um local de rede
 				Escolher um local de rede personalizado
 				\\Servidor\Arquivos
 				Arquivos
-Obs: Conforme documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento, nesse cenário 
-a facilidade será não utilziar uma Letra de Unidade, os testes de busca de arquivos demoraram o mesmo tempo que a unidade 
-mapeada.
 
-#04_ Montagem do compartilhamento utilizando a opção do Windows Explorer: WebDAV:
+Obs: Conforme documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento, nesse cenário a facilidade será não utilizar uma Letra de Unidade, os testes de busca de arquivos demoraram o mesmo tempo que a unidade mapeada.
+
+04_ Montagem do compartilhamento utilizando a opção do Windows Explorer: WebDAV:
 	Windows Explorer
 		Este Computador
 			Adicionar um local de rede
 				Escolher um local de rede personalizado
 				https://Servidor:5001/Arquivos
-Obs: Igual a opção de adicionar um Local de Rede, nesse cenário utilizando o acesso ao servidor WebDAV que foi configurado 
-nas permissões de compartilhamento da pasta, nos teste de velocidade de busca de arquivos, demorou mais para encontrar e 
-localizar o conteúdo.
 
-#05_ Montagem do compartilhamento utilizando o comando: Mklink:
+Obs: Igual a opção de adicionar um Local de Rede, nesse cenário utilizando o acesso ao servidor WebDAV que foi configurado nas permissões de compartilhamento da pasta, nos teste de velocidade de busca de arquivos, demorou mais para encontrar e localizar o conteúdo.
+
+05_ Montagem do compartilhamento utilizando o comando: Mklink:
 	Prompt de Comando como Administrador
 		cd \users\usuário\Documentos
 		mklink /D  Arquivos \\Servidor\Arquivos
-Obs: Conforme a documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento, foi feito a 
-criação do Link de Diretório na pasta: Documentos, executado a indexação e feito a busca de arquivos e conteúdo, nesse 
-cenário o processo demorou mais tempo para localizar os arquivos.
 
-#06_ Montagem do compartilhamento utilizando o comando: mount:
+Obs: Conforme a documentação da Microsoft, essa opção acelera a indexação dos arquivos nos compartilhamento, foi feito a criação do Link de Diretório na pasta: Documentos, executado a indexação e feito a busca de arquivos e conteúdo, nesse cenário o processo demorou mais tempo para localizar os arquivos.
+
+06_ Montagem do compartilhamento utilizando o comando: Mount:
 	mount -o anon \\Servidor\Arquivos n:
-Obs: Suporte ao protocolo NFS, nesse configuração tivemos incompatibilidade de caracteres no compartilhamento, velocidade 
-de busca de arquivos demorou bastante devido a incompatibilidade de caracteres (projeto não foi mais testado e nem 
-verificado a falha dos caracteres)
+
+Obs: Suporte ao protocolo NFS, nesse configuração tivemos incompatibilidade de caracteres no compartilhamento, velocidade de busca de arquivos demorou bastante devido a incompatibilidade de caracteres (projeto não foi mais testado e nem verificado a falha dos caracteres)
 		
 ------------------------------------------------------------------------------------
 
-#01_ Transferências dos arquivos do Servidor Desktop Windows 10 utilizando o comando: robocopy
+01_ Transferências dos arquivos do Servidor Desktop Windows 10 utilizando o comando: Robocopy
 	robocopy S:\Servidor N:\ /S /E /R:0 /W:0 /V /NP /ETA /LOG:robocopy.log
 	
 Parâmetros utilizados no Robocopy
@@ -168,34 +155,47 @@ Parâmetros utilizados no Robocopy
 /ETA = Mostra o tempo estimado de chegada (ETA) dos arquivos copiados.
 /LOG: = Grava a saída de status no arquivo de log (substitui o arquivo de log existente).
 
-#01_ Total de Arquivos e Diretórios no Compartilhamento: Arquivos (Share principal da empresa)
+------------------------------------------------------------------------------------
+
+01_ Total de Arquivos e Diretórios no Compartilhamento: Arquivos (Share principal da empresa)
 	Total (01/03/2021): 250,61GB
 	Arquivos (01/03/2021): 163092
 	Diretórios (01/03/2021): 9288
-	
+
+Imagem-03: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/03-Shares.png
+Imagem-04: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/04-FilesFolders.png
+
 -------------------------------------------------------------------------------------
-#01_ Teste de desempenho de Leitura e Escrita utilizando o software: NAS performance tester
+
+01_ Teste de desempenho de Leitura e Escrita utilizando o software: NAS Performance Tester
 	http://www.808.dk/?code-csharp-nas-performance
 
-#02_ Teste de velocidade de Rede utilizando o software: iperf3
+Obs: Foi feito os testes de desempenho de Leitura e Escrita do NAS QNAP utilizando o Software NAS Performance Tester em um desktop Windows 10 Pro conectado na Porta GigabitEthernet, as velocidades ficaram na média de: Read: 104,44MB/sec e Write: 95,19MB/sec conforme imagem:
+
+Imagem-05: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/05-NAS-ReadWrite.jpeg
+
+02_ Teste de velocidade de Rede utilizando o software: iPerf3
 	https://iperf.fr/iperf-download.php
 	https://www.qnapclub.eu/en
 
+Obs: Foi feito os testes de desempenho de Largura de Banda do NAS QNAP utilizando o Software iPerf3 em um desktop Windows 10 Pro conectado na Porta GigabitEthernet, as velocidades ficaram na média de: Sender: 936Mb/s e Receiver: 936Mb/s conforme imagem:
+
+Imagem-06: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/06-NAS-iPerf3.jpeg
+
 ------------------------------------------------------------------------------------
 
-#01_ Teste de pesquisa utilizando o Windows Explorer Search
+01_ Teste de pesquisa utilizando o Windows Explorer Search
 
-#02_ Teste de pesquisa utilizando o Software Agente Ransack Free
+02_ Teste de pesquisa utilizando o Software Agente Ransack Free
 	https://www.mythicsoft.com/agentransack/
-Obs teste feito utilizando o Software Agente Ransack Free para localizar conteúdos de arquivos *.XLSX demorou cerca
-de 3:
+
+Obs: Teste feito utilizando o Software Agente Ransack Free para localizar conteúdos de arquivos *.XLSX com filtro de conteúdo, a pesquisa demorou cerca de 00:00 e localizou mais arquivos com o conteúdo selecionado que a pesquisa do Windows Search
+
 ------------------------------------------------------------------------------------
 
-#01_ Link de referência e pesquisas sobre a velocidade do Windows Explorer Search e da Indexação do Windows
+#01_ Link de referência das pesquisas sobre a velocidade do Windows Explorer Search e da Indexação do Windows em Storage NAS QNAP e outras soluções de Storage
 
-Keywords google: qnap slow smb performance, qnap slow search share windows, qnap indexing files, qnap windows search, 
-qnap nas offline files, Mapped network drive is offline, windows search indexer samba4, qnap smb windows search index,
-qnap ms-wsp, 
+Keywords google: qnap slow smb performance, qnap slow search share windows, qnap indexing files, qnap windows search, qnap nas offline files, Mapped network drive is offline, windows search indexer samba4, qnap smb windows search index, qnap ms-wsp, 
 
 01: https://forum.qnap.com/viewtopic.php?t=159277
 02: https://forum.qnap.com/viewtopic.php?t=110401
