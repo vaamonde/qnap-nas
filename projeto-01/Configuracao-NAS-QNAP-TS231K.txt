@@ -17,11 +17,12 @@ empresa (Produção, Estoque, Vendas, Faturamento, etc...), esse recurso e funda
 correspondente a cada pedido de venda da empresa (Obs: a mesma não possui um sistema de Gestão Empresarial para gerenciar todas 
 as fases de produção e venda dos seus produtos).
 
-Servidor de Arquivos atual: Desktop Windows 10
-CPU: 
-Hard Disk: - Sistema de Arquivos: NTFS
-Localização do arquivos da empresa:
-Compartilhamento dos arquivos da empresa:
+Servidor de Arquivos atual: Desktop Windows 10 Pro
+CPU: AMD A10-7860k Radeon R7 - 8GB RAM
+Hard Disk: 01 (um) Seagate Barracuda 500GB 16MB Cache 7200rpm - Sistema de Arquivos: NTFS
+Placa de Rede: Realtek PCIe GbE 10/100/1000Mbps
+Localização dos arquivos da empresa: C:\Users\Usuário\Documents\Servidor
+Compartilhamento dos arquivos da empresa: \\192.168.0.9\Users\Usuário\Documents
 
 NAS Modelo: QNAP TS-231K - Firmware: 4.5.2.1566 (01/03/2021)
 CPU: Cortex-A15 Quad-Core 1.7Ghz - 1.0GB RAM
