@@ -9,7 +9,7 @@ Principais arquivos utilizados pela empresa: Planilhas Eletrônicas desenvolvida
 
 Desafio da migração: após a primeira migração feita em Janeiro/2021, a principal reclamação dos usuários da Rede Local estavá  associada a velocidade de Pesquisa e Busca utilizando o recurso do Windows Explorer Search com as opções habilidades de: Opções  Avançadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramente de trabalho da empresa, devido a mesma  trabalhar com vários arquivos de Planilhas Eletrônicas desenvolvidas no Microsoft Office Excel e separadas por várias áreas da  empresa (Produção, Estoque, Vendas, Faturamento, etc...), esse recurso e fundamental para localizar o conteúdo dos arquivos  correspondente a cada pedido de venda da empresa (Obs: a mesma não possui um sistema de Gestão Empresarial para gerenciar todas as fases de produção e venda dos seus produtos).
 
-## **Servidor de Arquivos atual: Desktop Windows 10 Pro**
+## **Servidor de Arquivos: Desktop Windows 10 Pro**
 	CPU: AMD A10-7860k Radeon R7 - 8GB RAM
 	Hard Disk: 01 (um) Seagate Barracuda 500GB 16MB Cache 7200rpm - Sistema de Arquivos: NTFS
 	Placa de Rede: Realtek PCIe GbE 10/100/1000Mbps
@@ -26,6 +26,7 @@ Desafio da migração: após a primeira migração feita em Janeiro/2021, a prin
 	Switch PoE: 01 (um) TP-Link TL-SG1005P 05 Portas RJ45 10/100/1000Mbps
 	Access Point: 02 (dois) Ubiquiti Unifi UAP-AC-LR 01 Porta RJ45 PoE 10/100/1000Mbps
 
+Imagem-07: 
 ------------------------------------------------------------------------------------
 
 # Configurações principais do NAS-QNAP TS-231K
@@ -193,6 +194,8 @@ Imagem-06: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/06-
 # Testes de Busca de Arquivos e Conteúdos no NAS-QNAP TS-231K
 
 ## **01_ Teste de pesquisa utilizando o Windows Explorer Search**
+
+Obs: Teste feito utilizando o Windows Explorer Search com as opções avançadas de Pesquisa de Conteúdo habilitada, pesquisando somente o conteúdo do arquivo, a pesquisa demorou cerca de 00:00 e localizou apenas os arquivos principais, não localizando todos os arquivos e com o desempenho inferior ao servidor atual.
 
 ## **02_ Teste de pesquisa utilizando o Software Agente Ransack Free**
 	https://www.mythicsoft.com/agentransack/
