@@ -150,7 +150,7 @@ Obs: Suporte ao protocolo NFS, nesse configuração tivemos incompatibilidade de
 ## **01_ Transferências dos arquivos do Servidor Desktop Windows 10 utilizando o comando: Robocopy**
 	robocopy S:\Servidor N:\ /S /E /R:0 /W:0 /V /NP /ETA /LOG:robocopy.log
 	
-Parâmetros utilizados no Robocopy
+## **Parâmetros utilizados no Robocopy**
 	/S = Copia subdiretórios. Essa opção exclui automaticamente os diretórios vazios.
 	/E = Copia subdiretórios. Essa opção inclui automaticamente diretórios vazios.
 	/R:0 = Especifica o número de repetições em cópias com falha. O valor padrão de n é 1 milhão (1 milhão tentativas).
