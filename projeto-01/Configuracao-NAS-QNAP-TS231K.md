@@ -169,7 +169,7 @@ Obs: Habilitado o suporte ao protocolo NFS no Windows 10, nessa configuração t
 	Arquivos (01/03/2021): 163092
 	Diretórios (01/03/2021): 9288
 
-Imagem-03: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/03-Shares.png
+Imagem-03: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/03-Shares.png<br>
 Imagem-04: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/04-FilesFolders.png
 
 -------------------------------------------------------------------------------------
@@ -214,7 +214,7 @@ Imagem-09:
 
 ## **01_ Link de referência das pesquisas sobre a velocidade do Windows Explorer Search e da Indexação do Windows em Storage NAS QNAP e outras soluções de Storage**
 
-Keywords google: qnap slow smb performance, qnap slow search share windows, qnap indexing files, qnap windows search, qnap nas offline files, Mapped network drive is offline, windows search indexer samba4, qnap smb windows search index, qnap ms-wsp, 
+**Keywords google:** qnap slow smb performance, qnap slow search share windows, qnap indexing files, qnap windows search, qnap nas offline files, Mapped network drive is offline, windows search indexer samba4, qnap smb windows search index, qnap ms-wsp, 
 
 01: https://forum.qnap.com/viewtopic.php?t=159277<br>
 02: https://forum.qnap.com/viewtopic.php?t=110401<br>
