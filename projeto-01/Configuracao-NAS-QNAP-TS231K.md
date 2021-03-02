@@ -16,17 +16,19 @@ Imagem-02: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/02-
 	Localização dos arquivos da empresa: C:\Users\Usuário\Documents\Servidor
 	Compartilhamento dos arquivos da empresa: \\192.168.0.9\Users\Usuário\Documents
 
-## **NAS Modelo: QNAP TS-231K - Firmware: 4.5.2.1566 (01/03/2021)**
-	CPU: Cortex-A15 Quad-Core 1.7Ghz - 1.0GB RAM<br>
-	Hard Disk: 02 (dois) Seagate Barracuda 2TB 256MB Cache 7200rpm<br>
-	Licença: exFAT Driver<br>
+## **NAS Modelo: QNAP TS-231K**
+	Firmware: 4.5.2.1566 (01/03/2021)
+	CPU: Cortex-A15 Quad-Core 1.7Ghz - 1.0GB RAM
+	Hard Disk: 02 (dois) Seagate Barracuda 2TB 256MB Cache 7200rpm
+	Licença: exFAT Driver
 
 ## **Infraestrutura de Rede**
 	Switch: 01 (um) TP-Link T-1600G-28TS 24 Portas RJ45 10/100/1000Mbps
 	Switch PoE: 01 (um) TP-Link TL-SG1005P 05 Portas RJ45 10/100/1000Mbps
 	Access Point: 02 (dois) Ubiquiti Unifi UAP-AC-LR 01 Porta RJ45 PoE 10/100/1000Mbps
 
-Imagem-07: 
+Imagem-07: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/07-Topology.png
+
 ------------------------------------------------------------------------------------
 
 # Configurações principais do NAS-QNAP TS-231K
