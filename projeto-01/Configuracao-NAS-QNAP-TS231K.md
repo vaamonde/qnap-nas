@@ -1,13 +1,13 @@
 # Projeto de Migração do Servidor Desktop Windows 10 para o Storage NAS QNAP TS-231K
 
-Objetivo da migração do Desktop Windows 10 para o NAS QNAP: desativação do Servidor/Desktop Windows 10 e remoção da localização atual para ser utilizado como Desktop de um novo funcionário, a utilização do NAS QNAP irá diminuir o consumo de energia elétrica e possibilitará colocar o mesmo dentro do Rack atual conforme imagens:
+**Objetivo da migração do Desktop Windows 10 para o NAS QNAP:** desativação do Servidor/Desktop Windows 10 e remoção da localização atual para ser utilizado como Desktop de um novo funcionário, a utilização do NAS QNAP irá diminuir o consumo de energia elétrica e possibilitará colocar o mesmo dentro do Rack atual conforme imagens:
 
 Imagem-01: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/01-servidor.jpg<br>
 Imagem-02: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/02-nas-qnap.jpg
 
-Principais arquivos utilizados pela empresa: Planilhas Eletrônicas desenvolvidas em Microsoft Excel e arquivos de Imagens Gráficas utilizando o CorelDRAW e Adobe Photoshop.
+**Principais arquivos utilizados pela empresa:** Planilhas Eletrônicas desenvolvidas em Microsoft Excel e arquivos de Imagens Gráficas utilizando o CorelDRAW e Adobe Photoshop.
 
-Desafio da migração: após a primeira migração feita em Janeiro/2021, a principal reclamação dos usuários da Rede Local estavá  associada a velocidade de Pesquisa e Busca utilizando o recurso do Windows Explorer Search com as opções habilidades de: Opções  Avançadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramente de trabalho da empresa, devido a mesma  trabalhar com vários arquivos de Planilhas Eletrônicas desenvolvidas no Microsoft Office Excel e separadas por várias áreas da  empresa (Produção, Estoque, Vendas, Faturamento, etc...), esse recurso e fundamental para localizar o conteúdo dos arquivos  correspondente a cada pedido de venda da empresa (Obs: a mesma não possui um sistema de Gestão Empresarial para gerenciar todas as fases de produção e venda dos seus produtos).
+**Desafio da migração:** após a primeira migração feita em Janeiro/2021, a principal reclamação dos usuários da Rede Local estavá  associada a velocidade de Pesquisa e Busca utilizando o recurso do Windows Explorer Search com as opções habilidades de: Opções  Avançadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramente de trabalho da empresa, devido a mesma  trabalhar com vários arquivos de Planilhas Eletrônicas desenvolvidas no Microsoft Office Excel e separadas por várias áreas da  empresa (Produção, Estoque, Vendas, Faturamento, etc...), esse recurso e fundamental para localizar o conteúdo dos arquivos  correspondente a cada pedido de venda da empresa (Obs: a mesma não possui um sistema de Gestão Empresarial para gerenciar todas as fases de produção e venda dos seus produtos).
 
 ## **Servidor de Arquivos: Desktop Windows 10 Pro**
 	CPU: AMD A10-7860k Radeon R7 - 8GB RAM
