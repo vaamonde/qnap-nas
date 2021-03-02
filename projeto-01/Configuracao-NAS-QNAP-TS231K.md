@@ -48,7 +48,7 @@ Imagem-07: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/07-
 			Espaço Livre: 0,3TB
 			Assinatura: 81,9%
 
-Obs: Não foi configurado o recurso de RAID-1, nos testes de desempenho de Leitura/Escrita e principalmente na Busca de Arquivos, a velocidade ficou muito abaixo do esperado, ficando pior em relação ao Servidor atual da empresa (Desktop Windows 10)
+Obs: Não foi configurado o recurso de RAID-1, nos testes de desempenho de Leitura/Escrita e principalmente na Busca de Arquivos, a velocidade ficou muito abaixo do esperado, ficando pior em relação ao Servidor atual da empresa (Desktop Windows 10).
 
 ## **02_ Chaves de Rede e Virtual**
 	Interfaces
@@ -75,7 +75,7 @@ Obs: Foi configurado somente o protocolo SMB2.1 nas opções de Maior Versão e 
 			Habilitar permissões avançadas de pasta
 			Habilitar Windows ACL Support
 
-Obs: Com essa opção habilitada, possibilita os recursos de permissões de acesso aos compartilhamentos e pastas utilizando o Windows Explorer para aplicar as Permissões NTFS e de Compartilhamento, permitindo criar regras de ACL e quebra de herança de pastas, esse recurso será utilizando junto com o ABES (Access-Based Enumeration Service)
+Obs: Com essa opção habilitada, possibilita os recursos de permissões de acesso aos compartilhamentos e pastas utilizando o Windows Explorer para aplicar as Permissões NTFS e de Compartilhamento, permitindo criar regras de ACL e quebra de herança de pastas, esse recurso será utilizando junto com o ABES (Access-Based Enumeration Service).
 
 ------------------------------------------------------------------------------------
 
@@ -141,7 +141,7 @@ Obs: Conforme a documentação da Microsoft, essa opção acelera a indexação 
 ## **06_ Montagem do compartilhamento utilizando o comando: Mount:**
 	mount -o anon \\Servidor\Arquivos n:
 
-Obs: Suporte ao protocolo NFS, nesse configuração tivemos incompatibilidade de caracteres no compartilhamento, velocidade de busca de arquivos demorou bastante devido a incompatibilidade de caracteres (projeto não foi mais testado e nem verificado a falha dos caracteres)
+Obs: Habilitado o suporte ao protocolo NFS no Windows 10, nessa configuração tivemos incompatibilidade de caracteres no compartilhamento, velocidade de busca de arquivos demorou bastante devido a incompatibilidade de caracteres (projeto não foi mais testado e nem verificado a falha dos caracteres).
 		
 ------------------------------------------------------------------------------------
 
@@ -199,10 +199,14 @@ Imagem-06: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/06-
 
 Obs: Teste feito utilizando o Windows Explorer Search com as opções avançadas de Pesquisa de Conteúdo habilitada, pesquisando somente o conteúdo do arquivo, a pesquisa demorou cerca de 00:00 e localizou apenas os arquivos principais, não localizando todos os arquivos e com o desempenho inferior ao servidor atual.
 
+Imagem-08: 
+
 ## **02_ Teste de pesquisa utilizando o Software Agente Ransack Free**
 	https://www.mythicsoft.com/agentransack/
 
-Obs: Teste feito utilizando o Software Agente Ransack Free para localizar conteúdos de arquivos *.XLSX com filtro de conteúdo, a pesquisa demorou cerca de 00:00 e localizou mais arquivos com o conteúdo selecionado que a pesquisa do Windows Search
+Obs: Teste feito utilizando o Software Agente Ransack Free para localizar conteúdos de arquivos *.XLSX com filtro de conteúdo, a pesquisa demorou cerca de 00:00 e localizou mais arquivos com o conteúdo selecionado que a pesquisa do Windows Search.
+
+Imagem-09:
 
 ------------------------------------------------------------------------------------
 
