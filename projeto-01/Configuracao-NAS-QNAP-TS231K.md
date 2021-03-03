@@ -7,7 +7,11 @@ Imagem-02: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/02-
 
 **Principais arquivos utilizados pela empresa:** Planilhas Eletrônicas desenvolvidas em Microsoft Office Excel (várias versões) e arquivos de Imagens Gráficas utilizando o CorelDRAW e Adobe Photoshop.
 
-**Desafio da migração:** após a primeira migração feita em Janeiro/2021, a principal reclamação dos usuários da Rede Local estavá associada a velocidade de Pesquisa e Busca de Conteúdo utilizando o recurso do Windows Explorer Search com as opções habilidades de: Opções Avançadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramente de trabalho da empresa, devido a mesma trabalhar com vários arquivos de Planilhas Eletrônicas desenvolvidas no Microsoft Office Excel e separadas por vários setores da empresa (Produção, Estoque, Vendas, Faturamento, Expedição, etc...) e distribuídas em vários diretórios diferentes, esse recurso e fundamental para localizar o conteúdo dos arquivos correspondente a cada pedido de venda e seu status atual de produção e envio para o cliente (Obs: a empresa não possui um Sistema de Gestão Empresarial ERP para gerenciar todas as fases de venda e produção dos seus produtos, utilizando como sistema de controle principal da gestão da empresa as Planilhas Eletrônicas desenvolvidas individualmente ou interligadas via Fórmulas =PROCV(), =INDEX(), etc...).
+**Desafio da migração:** após a primeira migração feita em Janeiro/2021, a principal reclamação dos usuários da Rede Local estavá associada a velocidade de Pesquisa e Busca de Conteúdo de arquivos do Microsoft Office Excel utilizando o recurso do Windows Explorer Search (MS-WSP) com as opções habilidades de: Opções Avançadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramenta de trabalho utilizada pelos funcionários, a empresa trabalhar com vários arquivos de Planilhas Eletrônicas criadas por vários funcionários em setores da empresa (Produção, Estoque, Vendas, Faturamento, Expedição, etc...) e organizadas em vários diretórios diferentes, esse recurso e fundamental para localizar o conteúdo dos arquivos correspondente a cada pedido de venda e seu status atual de produção ou envio para o cliente (Obs: a empresa não possui um Sistema de Gestão Empresarial ERP para gerenciar todas as fases de venda e produção dos seus produtos, utilizando como sistema de gestão principal da empresa as Planilhas Eletrônicas desenvolvidas individualmente por cada funcionário do seu setor ou interligadas essas planilhas via Fórmulas como por exemplo: =PROCV(), =INDEX(), etc...).
+
+**Análise da falha de Indexação dos Arquivos e Diretórios no NAS QNAP** conforme vários How-To, Artigos, Postagem no Fórum Oficial do QNAP e de outros fabricantes ou tecnologias de NAS, Storage, SAMBA4, etc... (conforme links no final desse artigo), e todos os testes executados em Clientes rodando o Microsoft Windows 10 Pro (conforme tópicos abaixo das especificações técnicas, configurações e testes de desempenho) a falha de Indexação utilizando o Protocolo MS-WSP (Windows Search Protocol) e MS-WSS (Windows Search service) está aparentemente associada ao protocolo utilizado pelo NAS QNAP do SAMBA4 SMB  que não suporta Indexação de Arquivos em Compartilhamentos SMB/CIFS para as versões mais novas do Windows Search Protocol nos Cliente Windows 10 Pro (conforme artigos da Microsoft esse recurso ficou restrito para Servidores Microsoft ou Clientes Windows mais novos, onde existe a possibilidade de criar o Indexador local e compartilhar com os clientes remotos).
+
+------------------------------------------------------------------------------------
 
 ## **Servidor de Arquivos: Desktop Windows 10 Pro**
 	CPU: AMD A10-7860k Radeon R7 - 8GB RAM
@@ -215,13 +219,14 @@ Imagem-08: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/08-
 Obs: Teste feito utilizando o Software DocFetcher para localizar o conteúdo de arquivos *.XLSX com filtro de conteúdo, a pesquisa demorou cerca de 0m:0s e localizou mais arquivos com o conteúdo selecionado que a pesquisa do Windows Search (04 arquivos de Planilhas de Excel que contia o conteúdo pesquisado).
 
 Imagem-10: 
+
 ------------------------------------------------------------------------------------
 
 # Material de apoio para os testes executados na migração
 
 ## **01_ Link de referência das pesquisas sobre a velocidade do Windows Explorer Search e da Indexação do Windows em Storage NAS QNAP e outras soluções de Storage**
 
-**Keywords google:** qnap slow smb performance, qnap slow search share windows, qnap indexing files, qnap windows search, qnap nas offline files, Mapped network drive is offline, windows search indexer samba4, qnap smb windows search index, qnap ms-wsp, 
+**Keywords google:** qnap slow smb performance, qnap slow search share windows, qnap indexing files, qnap windows search, qnap nas offline files, Mapped network drive is offline, windows search indexer samba4, qnap smb windows search index, qnap ms-wsp, freenas Speeding search, freenas indexing share
 
 01: https://forum.qnap.com/viewtopic.php?t=159277<br>
 02: https://forum.qnap.com/viewtopic.php?t=110401<br>
