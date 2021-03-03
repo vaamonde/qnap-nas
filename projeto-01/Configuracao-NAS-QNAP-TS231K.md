@@ -1,13 +1,13 @@
 # Projeto de Migração do Servidor Desktop Windows 10 para o Storage NAS QNAP TS-231K
 
-**Objetivo da migração do Desktop Windows 10 para o NAS QNAP:** desativação do Servidor/Desktop Windows 10 e remoção da localização atual para ser utilizado como Desktop de um novo funcionário, a utilização do NAS QNAP irá diminuir o consumo de energia elétrica e possibilitará colocar o mesmo dentro do Rack atual conforme imagens:
+**Objetivo da migração do Desktop Windows 10 para o NAS QNAP:** desativação do Servidor/Desktop Windows 10 que é utilizado como servidor principal de empresa, remoção da sua localização atual (vide imagem), reaproveitamento do Desktop para ser utilizado com um novo funcionário, aumento da segurança e centralização dos arquivos da empresa, backup automático dos arquivos, sincronização com o Cloud e Hard Disk Externo, diminuição do consumo de energia elétrica e a possibilidade de colocar o NAS QNAP dentro do Rack atual conforme imagens:
 
 Imagem-01: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/01-servidor.jpg<br>
 Imagem-02: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/02-nas-qnap.jpg
 
-**Principais arquivos utilizados pela empresa:** Planilhas Eletrônicas desenvolvidas em Microsoft Excel e arquivos de Imagens Gráficas utilizando o CorelDRAW e Adobe Photoshop.
+**Principais arquivos utilizados pela empresa:** Planilhas Eletrônicas desenvolvidas em Microsoft Excel (várias versões) e arquivos de Imagens Gráficas utilizando o CorelDRAW e Adobe Photoshop.
 
-**Desafio da migração:** após a primeira migração feita em Janeiro/2021, a principal reclamação dos usuários da Rede Local estavá  associada a velocidade de Pesquisa e Busca utilizando o recurso do Windows Explorer Search com as opções habilidades de: Opções  Avançadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramente de trabalho da empresa, devido a mesma  trabalhar com vários arquivos de Planilhas Eletrônicas desenvolvidas no Microsoft Office Excel e separadas por várias áreas da  empresa (Produção, Estoque, Vendas, Faturamento, etc...), esse recurso e fundamental para localizar o conteúdo dos arquivos  correspondente a cada pedido de venda da empresa (Obs: a mesma não possui um sistema de Gestão Empresarial para gerenciar todas as fases de produção e venda dos seus produtos).
+**Desafio da migração:** após a primeira migração feita em Janeiro/2021, a principal reclamação dos usuários da Rede Local estavá  associada a velocidade de Pesquisa e Busca de Conteúdo utilizando o recurso do Windows Explorer Search com as opções habilidades de: Opções  Avançadas, Conteúdo do Arquivo e Arquivos de Sistema, essa é a principal ferramente de trabalho da empresa, devido a mesma trabalhar com vários arquivos de Planilhas Eletrônicas desenvolvidas no Microsoft Office Excel e separadas por várias áreas da  empresa (Produção, Estoque, Vendas, Faturamento, etc...) e distribuídas em vários diretórios, esse recurso e fundamental para localizar o conteúdo dos arquivos correspondente a cada pedido de venda da empresa e seu status (Obs: a empresa não possui um Sistema de Gestão Empresarial ERP para gerenciar todas as fases de venda e produção dos seus produtos, utilizando como controle principais Planilhas Eletrônicas individuais e interligadas).
 
 ## **Servidor de Arquivos: Desktop Windows 10 Pro**
 	CPU: AMD A10-7860k Radeon R7 - 8GB RAM
@@ -48,7 +48,7 @@ Imagem-07: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/07-
 			Espaço Livre: 0,3TB
 			Assinatura: 81,9%
 
-Obs: Não foi configurado o recurso de RAID-1, nos testes de desempenho de Leitura/Escrita e principalmente na Busca de Arquivos, a velocidade ficou muito abaixo do esperado, ficando pior em relação ao Servidor atual da empresa (Desktop Windows 10) em comparação aos volumes individuais.
+Obs: Não foi configurado o recurso de RAID-1, nos testes de desempenho de Leitura e Escrita e principalmente na Busca de Arquivos e Conteúdo, a velocidade ficou muito abaixo do esperado, ficando pior em relação ao Servidor atual da empresa (Desktop Windows 10) em comparação aos volumes individuais sem RAID-1.
 
 ## **02_ Chaves de Rede e Virtual**
 	Interfaces
