@@ -208,6 +208,13 @@ Obs: Teste feito utilizando o Software Agent Ransack Free para localizar o conte
 
 Imagem-08: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/08-AgentRansack.jpeg
 
+
+## **03_ Teste de pesquisa utilizando o Software DocFetcher Open Source**
+	http://docfetcher.sourceforge.net/en/download.html
+
+Obs: Teste feito utilizando o Software DocFetcher para localizar o conteúdo de arquivos *.XLSX com filtro de conteúdo, a pesquisa demorou cerca de 0m:0s e localizou mais arquivos com o conteúdo selecionado que a pesquisa do Windows Search (04 arquivos de Planilhas de Excel que contia o conteúdo pesquisado).
+
+Imagem-10: 
 ------------------------------------------------------------------------------------
 
 # Material de apoio para os testes executados na migração
@@ -229,3 +236,6 @@ Imagem-08: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/08-
 04: https://redmondmag.com/articles/2020/12/02/5-steps-to-fix-windows-indexing.aspx<br>
 05: https://social.technet.microsoft.com/Forums/en-US/cef10e47-2fe1-482b-be62-ae74116a4e5f/mapped-network-drive-is-offline?forum=win10itpronetworking<br>
 06: https://www.onmsft.com/how-to/how-to-use-network-file-shares-while-offline-in-windows-10<br>
+07: https://www.reddit.com/r/freenas/comments/2z90u6/speeding_up_file_search_on_network_shares/<br>
+08: https://www.truenas.com/community/threads/windows-libraries-search-best-solution.20604/<br>
+09: https://social.technet.microsoft.com/Forums/windows/en-US/afb904c1-1c61-4aae-b6b1-5cf525b9f8de/how-do-i-get-windows-7-to-index-a-network-mapped-drive?forum=w7itpronetworking
