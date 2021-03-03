@@ -166,8 +166,8 @@ Obs: Habilitado o suporte ao protocolo NFS no Windows 10, nessa configuração t
 
 ## **01_ Total de Arquivos e Diretórios no Compartilhamento: Arquivos (Share principal da empresa)**
 	Total (01/03/2021): 250,61GB
-	Arquivos (01/03/2021): 163092
-	Diretórios (01/03/2021): 9288
+	Arquivos (01/03/2021): 163.092
+	Diretórios (01/03/2021): 9.288
 
 Imagem-03: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/03-Shares.png<br>
 Imagem-04: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/04-FilesFolders.png
@@ -199,14 +199,14 @@ Imagem-06: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/06-
 
 Obs: Teste feito utilizando o Windows Explorer Search com as opções avançadas de Pesquisa de Conteúdo habilitada, pesquisando somente o conteúdo do arquivo, a pesquisa demorou cerca de 04m:25s e localizou apenas os arquivos principais (02 arquivos de Planilhas de Excel que contia o conteúdo pesquisado), não localizando todos os arquivos e com o desempenho inferior ao servidor atual.
 
-Imagem-08: 
+Imagem-08: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/08-AgentRansack.jpeg
 
 ## **02_ Teste de pesquisa utilizando o Software Agent Ransack Free**
 	https://www.mythicsoft.com/agentransack/
 
 Obs: Teste feito utilizando o Software Agent Ransack Free para localizar o conteúdo de arquivos *.XLSX com filtro de conteúdo, a pesquisa demorou cerca de 01m:14s e localizou mais arquivos com o conteúdo selecionado que a pesquisa do Windows Search (04 arquivos de Planilhas de Excel que contia o conteúdo pesquisado).
 
-Imagem-09:
+Imagem-09: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/09-WindowsSearch.jpeg
 
 ------------------------------------------------------------------------------------
 
