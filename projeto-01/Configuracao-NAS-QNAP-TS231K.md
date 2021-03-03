@@ -197,14 +197,14 @@ Imagem-06: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/06-
 
 ## **01_ Teste de pesquisa utilizando o Windows Explorer Search**
 
-Obs: Teste feito utilizando o Windows Explorer Search com as opções avançadas de Pesquisa de Conteúdo habilitada, pesquisando somente o conteúdo do arquivo, a pesquisa demorou cerca de 00:00 e localizou apenas os arquivos principais, não localizando todos os arquivos e com o desempenho inferior ao servidor atual.
+Obs: Teste feito utilizando o Windows Explorer Search com as opções avançadas de Pesquisa de Conteúdo habilitada, pesquisando somente o conteúdo do arquivo, a pesquisa demorou cerca de 04m:25s e localizou apenas os arquivos principais (02 arquivos de Planilhas de Excel que contia o conteúdo pesquisado), não localizando todos os arquivos e com o desempenho inferior ao servidor atual.
 
 Imagem-08: 
 
-## **02_ Teste de pesquisa utilizando o Software Agente Ransack Free**
+## **02_ Teste de pesquisa utilizando o Software Agent Ransack Free**
 	https://www.mythicsoft.com/agentransack/
 
-Obs: Teste feito utilizando o Software Agente Ransack Free para localizar conteúdos de arquivos *.XLSX com filtro de conteúdo, a pesquisa demorou cerca de 00:00 e localizou mais arquivos com o conteúdo selecionado que a pesquisa do Windows Search.
+Obs: Teste feito utilizando o Software Agent Ransack Free para localizar o conteúdo de arquivos *.XLSX com filtro de conteúdo, a pesquisa demorou cerca de 01m:14s e localizou mais arquivos com o conteúdo selecionado que a pesquisa do Windows Search (04 arquivos de Planilhas de Excel que contia o conteúdo pesquisado).
 
 Imagem-09:
 
