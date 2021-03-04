@@ -255,7 +255,7 @@ Imagem-10: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/10-
 06: https://www.onmsft.com/how-to/how-to-use-network-file-shares-while-offline-in-windows-10<br>
 07: https://www.reddit.com/r/freenas/comments/2z90u6/speeding_up_file_search_on_network_shares/<br>
 08: https://www.truenas.com/community/threads/windows-libraries-search-best-solution.20604/<br>
-09: https://social.technet.microsoft.com/Forums/windows/en-US/afb904c1-1c61-4aae-b6b1-5cf525b9f8de/how-do-i-get-windows-7-to-index-a-network-mapped-drive?forum=w7itpronetworking
-10: https://forge.univention.org/bugzilla/show_bug.cgi?id=43485
-11: https://pt.slideshare.net/Univention/ucs-product-roundtrip-highlights-2016-and-lookout-2017
+09: https://social.technet.microsoft.com/Forums/windows/en-US/afb904c1-1c61-4aae-b6b1-5cf525b9f8de/how-do-i-get-windows-7-to-index-a-network-mapped-drive?forum=w7itpronetworking<br>
+10: https://forge.univention.org/bugzilla/show_bug.cgi?id=43485<br>
+11: https://pt.slideshare.net/Univention/ucs-product-roundtrip-highlights-2016-and-lookout-2017<br>
 12: https://www.reddit.com/r/qnap/comments/a0x8ry/can_the_ts453be_index_files_via_windows_explorer/
