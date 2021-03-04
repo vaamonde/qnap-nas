@@ -213,9 +213,9 @@ Obs: Testamos utilizando o Windows Explorer Search com as opções avançadas de
 
 Imagem-09: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/09-WindowsSearch.jpeg
 
-Mesmo teste feito no servidor atual da empresa demora cerca de: 03s e localizou vários arquivos que já estão indexados no servidor e no cliente Windows 10.
+Mesmo teste executado no servidor atual da empresa demorou cerca de: 03s e localizou vários arquivos que já estão indexados no servidor e no cliente Windows 10 Pro.
 
-Imagem-11: 
+Imagem-11: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/11-IndexWin10.jpeg
 
 ## **02_ Teste de pesquisa utilizando o Software Agent Ransack Free**
 	https://www.mythicsoft.com/agentransack/
@@ -230,7 +230,7 @@ Imagem-08: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/08-
 
 Obs: Testamos utilizando o Software DocFetcher para localizar o conteúdo de arquivos *.XLSX com filtro de conteúdo, infelizmente o aplicativo não fornece recursos de pesquisas de conteúdo, ficando fora dos testes finais e não sendo indicado para produção.
 
-Imagem-10: 
+Imagem-10: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/10-DocFetcher.jpeg
 
 ------------------------------------------------------------------------------------
 
@@ -258,3 +258,4 @@ Imagem-10:
 09: https://social.technet.microsoft.com/Forums/windows/en-US/afb904c1-1c61-4aae-b6b1-5cf525b9f8de/how-do-i-get-windows-7-to-index-a-network-mapped-drive?forum=w7itpronetworking
 10: https://forge.univention.org/bugzilla/show_bug.cgi?id=43485
 11: https://pt.slideshare.net/Univention/ucs-product-roundtrip-highlights-2016-and-lookout-2017
+12: https://www.reddit.com/r/qnap/comments/a0x8ry/can_the_ts453be_index_files_via_windows_explorer/
