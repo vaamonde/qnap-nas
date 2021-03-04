@@ -11,7 +11,9 @@ Imagem-02: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/02-
 
 **Análise da falha de Indexação dos Arquivos e Diretórios no NAS QNAP** conforme pesquisa em vários How-To, Artigos, Postagens no Fórum Oficial do QNAP ao comparar  essa falha com outros fabricantes ou tecnologias de NAS, Storage, SAMBA-4, etc... (conforme links no final desse artigo), e todos os testes executados em clientes rodando o Microsoft Windows 10 Pro (conforme tópicos abaixo das especificações técnicas, configurações e testes de desempenho) a falha de Indexação utilizando o Protocolo MS-WSP (Windows Search Protocol) e MS-WSS (Windows Search Service) está aparentemente associada ao protocolo utilizado pelo NAS QNAP do SAMBA-4 SMB que não suporta a Indexação de Arquivos em Compartilhamentos SMB/CIFS para as versões mais novas do Windows Search Protocol nos clientes Windows 10 Pro (conforme artigos e documentação da Microsoft esse recurso ficou restrito para Servidores Microsoft ou Clientes Windows mais recente, onde existe a possibilidade de criar um Indexador Local e compartilhar esse indexe com os clientes remotos).
 
-**Observação:** trabalhando com a Distribuição GNU/Linux UCS Univention Core Free v4.4.x (https://www.univention.com/products/ucs/) utilizando o SAMBA-4 v4.10.x (https://wiki.samba.org/index.php/Samba_4.10_Features_added/changed) com Suporte ao MS-WSP/MS-WSS desenvolvida pela distribuição (https://pt.slideshare.net/Univention/ucs-product-roundtrip-highlights-2016-and-lookout-2017 - https://forge.univention.org/bugzilla/show_bug.cgi?id=43485) essa falha de lentidão de Busca de Conteúdo de Arquivos utilizando o Windows Explorer Search não acontece devido ao suporte de indexação dos arquivos nos compartilhamentos configurados com os Protocolos SMB/CIFS (idem para Servidores Microsoft Windows Server 2008/2012/2016 e 2019).
+**Observação-01:** trabalhando com a Distribuição GNU/Linux UCS Univention Core Free v4.4.x (https://www.univention.com/products/ucs/) utilizando o SAMBA-4 v4.10.x (https://wiki.samba.org/index.php/Samba_4.10_Features_added/changed) com Suporte ao MS-WSP/MS-WSS desenvolvida pela distribuição (https://pt.slideshare.net/Univention/ucs-product-roundtrip-highlights-2016-and-lookout-2017 - https://forge.univention.org/bugzilla/show_bug.cgi?id=43485) essa falha de lentidão de Busca de Conteúdo de Arquivos utilizando o Windows Explorer Search não acontece devido ao suporte de indexação dos arquivos nos compartilhamentos configurados com os Protocolos SMB/CIFS (idem para Servidores Microsoft Windows Server 2008/2012/2016 e 2019).
+
+**Observação-02:** está sendo avaliado e testado a utilização de um Hard Disk SSD (exemplo: SSD Kingston A400, 960GB, SATA-III, Leitura 500MB/s, Gravação 450MB/s - SA400S37/960G) para o Armazenamento dos Arquivos principais da empresa com objetivo de acelerar a busca do conteúdo dos arquivos devido a lentidão do e a falta de suporte a Indexação de arquivos nos compartilhamentos, nessa documentação os valores de Leitura e Escrita dos HD são baseados nos disco atuais do QNAP NASP não em SSD.
 
 ------------------------------------------------------------------------------------
 
@@ -211,6 +213,10 @@ Obs: Testamos utilizando o Windows Explorer Search com as opções avançadas de
 
 Imagem-09: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/09-WindowsSearch.jpeg
 
+Mesmo teste feito no servidor atual da empresa demora cerca de: 03s e localizou vários arquivos que já estão indexados no servidor e no cliente Windows 10.
+
+Imagem-11: 
+
 ## **02_ Teste de pesquisa utilizando o Software Agent Ransack Free**
 	https://www.mythicsoft.com/agentransack/
 
@@ -222,7 +228,7 @@ Imagem-08: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/08-
 ## **03_ Teste de pesquisa utilizando o Software DocFetcher Open Source**
 	http://docfetcher.sourceforge.net/en/download.html
 
-Obs: Testamos utilizando o Software DocFetcher para localizar o conteúdo de arquivos *.XLSX com filtro de conteúdo, a pesquisa demorou cerca de 0m:0s e localizou mais arquivos com o conteúdo selecionado que a pesquisa do Windows Search (04 arquivos de Planilhas de Excel que contia o conteúdo pesquisado). Desvantagem desse recurso e que ele não é nativo ou integrado no Windows Explorer.
+Obs: Testamos utilizando o Software DocFetcher para localizar o conteúdo de arquivos *.XLSX com filtro de conteúdo, infelizmente o aplicativo não fornece recursos de pesquisas de conteúdo, ficando fora dos testes finais e não sendo indicado para produção.
 
 Imagem-10: 
 
