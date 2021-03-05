@@ -2,8 +2,8 @@
 
 **Objetivo da migração do Desktop Windows 10 para o NAS QNAP:** desativação do Servidor/Desktop Windows 10 que é utilizado como servidor de armazenamento de arquivos principal da empresa, remoção da sua localização atual (em cima do Rack), reaproveitamento do Desktop para ser utilizado como equipamento de uso pessoal de um novo funcionário, aumento da segurança de acesso e centralização dos arquivos da empresa, backup automático dos arquivos, sincronização dos arquivos com o Cloud e Hard Disk Externo, diminuição do consumo de energia elétrica e a possibilidade de colocar o NAS QNAP dentro do Rack atual conforme imagens:
 
-Imagem-01: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/01-servidor.jpg<br>
-Imagem-02: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/02-nas-qnap.jpg
+![Imagem-01:] (https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/01-servidor.jpg)<br>
+![Imagem-02:] (https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/02-nas-qnap.jpg)
 
 **Principais arquivos utilizados pela empresa:** Planilhas Eletrônicas desenvolvidas em Microsoft Office Excel (várias versões) e arquivos de Imagens Gráficas utilizando o CorelDRAW e Adobe Photoshop.
 
