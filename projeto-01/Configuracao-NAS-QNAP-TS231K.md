@@ -35,7 +35,7 @@
 	Switch PoE: 01 (um) TP-Link TL-SG1005P 05 Portas RJ45 10/100/1000Mbps
 	Access Point: 02 (dois) Ubiquiti Unifi UAP-AC-LR 01 Porta RJ45 PoE 10/100/1000Mbps
 
-Imagem-07: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/07-Topology.png
+![Imagem-07:](https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/07-Topology.png)
 
 ------------------------------------------------------------------------------------
 
@@ -181,8 +181,8 @@ Obs: Nesse projeto não utilizamos do iSCSI Initiator/Target pois afetaria as co
 	Arquivos (01/03/2021): 163.092
 	Diretórios (01/03/2021): 9.288
 
-Imagem-03: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/03-Shares.png<br>
-Imagem-04: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/04-FilesFolders.png
+![Imagem-03:](https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/03-Shares.png)<br>
+![Imagem-04:](https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/04-FilesFolders.png)
 
 -------------------------------------------------------------------------------------
 
@@ -193,7 +193,7 @@ Imagem-04: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/04-
 
 Obs: Foram feitos testes de desempenho de Leitura e Escrita do NAS QNAP TS-231K utilizando o Software NAS Performance Tester em um desktop Windows 10 Pro conectado na Porta GigabitEthernet (Desktop/Switch), as velocidades ficaram na média de: Read(Leitura): 104,44MB/sec e Write(Escrita): 95,19MB/sec conforme imagem:
 
-Imagem-05: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/05-NAS-ReadWrite.jpeg
+![Imagem-05:](https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/05-NAS-ReadWrite.jpeg)
 
 ## **02_ Teste de velocidade de Rede utilizando o software: iPerf3**
 	https://iperf.fr/iperf-download.php
@@ -201,7 +201,7 @@ Imagem-05: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/05-
 
 Obs: Foram feitos testes de desempenho de Largura de Banda do NAS QNAP TS-231K utilizando o Software iPerf3 em um desktop Windows 10 Pro conectado na Porta GigabitEthernet (Desktop/Switch), as velocidades ficaram na média de: Sender(Enviado): 936Mb/s e Receiver(Recebido): 936Mb/s conforme imagem:
 
-Imagem-06: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/06-NAS-iPerf3.jpeg
+![Imagem-06:](https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/06-NAS-iPerf3.jpeg)
 
 ------------------------------------------------------------------------------------
 
@@ -211,18 +211,18 @@ Imagem-06: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/06-
 
 Obs: Testamos utilizando o Windows Explorer Search com as opções avançadas de Pesquisa de Conteúdo habilitada, pesquisando somente o conteúdo do arquivo na localização principal dos arquivos da empresa onde é mais utilizado a busca dos arquivos/conteúdo (Planilhas Eletrônicas em Excel), a pesquisa demorou cerca de 04m:25s e localizou apenas alguns arquivos principais (02 arquivos de Planilhas de Excel que contia o conteúdo pesquisado), não localizando todos os arquivos e com o desempenho inferior ao servidor atual (Desktop Windows 10).
 
-Imagem-09: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/09-WindowsSearch.jpeg
+![Imagem-09:](https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/09-WindowsSearch.jpeg)
 
 Mesmo teste executado no servidor atual da empresa demorou cerca de: 03s e localizou vários arquivos que já estão indexados no servidor e no cliente Windows 10 Pro.
 
-Imagem-11: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/11-IndexWin10.jpeg
+![Imagem-11:](https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/11-IndexWin10.jpeg)
 
 ## **02_ Teste de pesquisa utilizando o Software Agent Ransack Free**
 	https://www.mythicsoft.com/agentransack/
 
 Obs: Testamos utilizando o Software Agent Ransack Free para localizar o conteúdo de arquivos *.XLSX com filtro de conteúdo, a pesquisa demorou cerca de 01m:14s (03m:11s mais rápido que o Windows Search) e localizou mais arquivos com o conteúdo selecionado que a pesquisa do Windows Search (04 arquivos de Planilhas de Excel que contia o conteúdo pesquisado). A desvantagem desse recurso é que ele não é nativo ou integrado no Windows Explorer.
 
-Imagem-08: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/08-AgentRansack.jpeg
+![Imagem-08:](https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/08-AgentRansack.jpeg)
 
 
 ## **03_ Teste de pesquisa utilizando o Software DocFetcher Open Source**
@@ -230,7 +230,7 @@ Imagem-08: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/08-
 
 Obs: Testamos utilizando o Software DocFetcher para localizar o conteúdo de arquivos *.XLSX com filtro de conteúdo, infelizmente o aplicativo não fornece recursos de pesquisas de conteúdo, ficando fora dos testes finais e não sendo indicado para produção.
 
-Imagem-10: https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/10-DocFetcher.jpeg
+![Imagem-10:](https://github.com/vaamonde/qnap-nas/blob/main/projeto-01/imagens/10-DocFetcher.jpeg)
 
 ------------------------------------------------------------------------------------
 
