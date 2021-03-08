@@ -13,7 +13,14 @@
 
 **Observação-01:** trabalhando com a Distribuição GNU/Linux UCS Univention Core Free v4.4.x (https://www.univention.com/products/ucs/) utilizando o SAMBA-4 v4.10.x (https://wiki.samba.org/index.php/Samba_4.10_Features_added/changed) com Suporte ao MS-WSP/MS-WSS desenvolvida pela distribuição (https://pt.slideshare.net/Univention/ucs-product-roundtrip-highlights-2016-and-lookout-2017 - https://forge.univention.org/bugzilla/show_bug.cgi?id=43485) essa falha de lentidão de Busca de Conteúdo de Arquivos utilizando o Windows Explorer Search não acontece devido ao suporte de indexação dos arquivos nos compartilhamentos configurados com os Protocolos SMB/CIFS (idem para Servidores Microsoft Windows Server 2008/2012/2016 e 2019).
 
-**Observação-02:** está sendo avaliado a utilização de um Hard Disk SSD (exemplo: SSD Kingston A400, 960GB, SATA-III, Leitura 500MB/s, Gravação 450MB/s - SA400S37/960G) para o Armazenamento dos Arquivos principais da empresa com objetivo de acelerar a busca do conteúdo dos arquivos nos compartilhados, devido a lentidão é a falta de suporte de Indexação de arquivos nos compartilhamentos, nessa documentação os valores de teste da Leitura e Escrita dos HD são baseados nos disco instalados atualmente no QNAP.
+**Observação-02:** está sendo avaliado e testado a utilização de um Hard Disk SSD (Solid-State Drive) para o Armazenamento Principal da empresa com objetivo de acelerar a busca do conteúdo dos arquivos nos compartilhados, devido a lentidão é a falta de suporte a Indexação de Arquivos nos Compartilhamentos SMB/CIFS, nessa documentação os valores de testes da Leitura e Escrita dos HD são baseados nos discos instalados atualmente no QNAP, abaixo alguns modelos de SSD que estão sendo avaliados nos testes.
+
+## **Fabricante e Modelo de SSD para o NAS**
+	SSD SanDisk Plus	480GB 	535MB/s 22.500 IOPS Read / 445MB/s 20.200 IOPS Write
+	SSD Crucial BX500	240GB	540MB/s 37.000 IOPS Read / 500MB/s 68.000 IOPS Write
+	SSD Adata SU635		480GB	520MB/s 40.000 IOPS Read / 450MB/s 65.000 IOPS Write
+	SSD Patriot Burst	240GB	555MB/s 80.000 IOPS Read / 500MB/s 60.000 IOPS Write
+	SSD Kingston A400	960GB	500MB/s 90.000 IOPS Read / 450MB/s 50.000 IOPS Write
 
 ------------------------------------------------------------------------------------
 
